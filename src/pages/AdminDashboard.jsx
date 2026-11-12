@@ -377,7 +377,7 @@ function FilledDashboardIcon({ name, size = 28 }) {
   );
 }
 
-function AdminDashboard() {
+function AdminDashboard({ onLogout }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activePeriod, setActivePeriod] = useState("month");
   const [searchQuery, setSearchQuery] = useState("");
@@ -690,6 +690,7 @@ function AdminDashboard() {
                     className="logout-button"
                     onClick={() => {
                       setProfileOpen(false);
+                        onLogout();
                       showToast("Logout action is ready for backend integration");
                     }}
                   >

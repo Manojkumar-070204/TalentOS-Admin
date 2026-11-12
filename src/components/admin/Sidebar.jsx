@@ -1,3 +1,4 @@
+
 import {
   House,
   UsersRound,
@@ -48,9 +49,15 @@ function Sidebar({ isOpen, onClose }) {
 
       <div className="sidebar-logo">
         <img src={talentosCap} alt="TalentOS" />
-        <h2>
-          Talent<span>OS</span>
-        </h2>
+
+        <div className="sidebar-brand-text">
+          <h2>
+            Artly<span>soft</span>
+          </h2>
+          <h2>
+            Talent<span>OS</span>
+          </h2>
+        </div>
       </div>
 
       <div className="sidebar-institute">
