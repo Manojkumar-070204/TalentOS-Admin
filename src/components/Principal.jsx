@@ -668,7 +668,7 @@ const AiBeaconIcon = ({ size = 18, className = '' }) => (
   </svg>
 );
 
-const Principal = () => {
+const Principal = ({ onLogout }) => {
   const [activeNav, setActiveNav] = useState('Dashboard');
   const [activeTab, setActiveTab] = useState('This Semester');
   const [searchQuery, setSearchQuery] = useState('');
@@ -1108,10 +1108,11 @@ const Principal = () => {
 
                     <button
                       className="dropdown-menu-item dropdown-logout-item"
-                      onClick={() => {
-                        setIsProfileOpen(false);
-                         window.location.href = "/TalentOS-Admin/login";
-                      }}
+                       onClick={() => {
+                      setIsProfileOpen(false);
+                        onLogout();
+                     
+                    }}
                     >
                       <LogOut size={16} className="dropdown-item-icon" />
                       <span>Logout</span>
