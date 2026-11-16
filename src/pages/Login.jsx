@@ -18,6 +18,7 @@ function Login({ onLogin }) {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
+  const [selectedRole, setSelectedRole] = useState("Institution Admin");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -39,7 +40,7 @@ function Login({ onLogin }) {
       return;
     }
 
-    onLogin();
+    onLogin(selectedRole);
   };
 
   const switchMode = () => {
@@ -255,6 +256,30 @@ function Login({ onLogin }) {
                 </div>
               ) : (
                 <>
+                  <div className="input-group">
+                    <UserRound className="input-icon" size={21} />
+                    <select
+                      aria-label="Select login role"
+                      value={selectedRole}
+                      onChange={(event) => setSelectedRole(event.target.value)}
+                      style={{
+                        flex: 1,
+                        minWidth: 0,
+                        width: "100%",
+                        border: "none",
+                        outline: "none",
+                        background: "transparent",
+                        color: "inherit",
+                        font: "inherit",
+                        cursor: "pointer",
+                      }}
+                    >
+                      <option value="Institution Admin">Institution Admin</option>
+                      <option value="Principal">Principal</option>
+                      <option value="Super Admin">Super Admin</option>
+                    </select>
+                  </div>
+
                   <div className="input-group">
                     <UserRound className="input-icon" size={21} />
                     <input

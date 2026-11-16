@@ -1,6 +1,6 @@
 {
   "name": "talentos-admin",
-   "homepage": "https://github.com/Manojkumar-070204/TalentOS-Admin",
+  "homepage": "https://github.com/Manojkumar-070204/TalentOS-Admin",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,6 +13,9 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.9",
+    "bootstrap-icons": "^1.13.2",
     "gh-pages": "^6.3.0",
     "lucide-react": "^1.71.0",
     "react": "^19.3.1",
