@@ -274,9 +274,10 @@ function Login({ onLogin }) {
                         cursor: "pointer",
                       }}
                     >
-                      <option value="Institution Admin">Institution Admin</option>
-                      <option value="Principal">Principal</option>
-                      <option value="Super Admin">Super Admin</option>
+                     <option value="Institution Admin">Institution Admin</option>
+<option value="Principal">Principal</option>
+<option value="Super Admin">Super Admin</option>
+<option value="Student">Student</option>
                     </select>
                   </div>
 
