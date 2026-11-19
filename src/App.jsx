@@ -5,6 +5,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import Principal from "./components/Principal";
 import SuperAdmin from "./components/SuperAdmin";
 import Student from "./components/Student";
+import StudentProfile from "./components/student profile";
 
 function App() {
   const [activeRole, setActiveRole] = useState("");
@@ -43,12 +44,10 @@ function App() {
       return <SuperAdmin onLogout={handleLogout} />;
 
     case "Student":
-      return (
-        <Student
-          user={studentUser}
-          onLogout={handleLogout}
-        />
-      );
+      return <Student user={studentUser} onLogout={handleLogout} />;
+
+    case "Student Profile":
+      return <StudentProfile onLogout={handleLogout} />;
 
     default:
       return <Login onLogin={handleLogin} />;

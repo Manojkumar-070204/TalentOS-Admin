@@ -3758,3 +3758,69 @@
     bottom: 10px !important;
   }
 }
+
+
+
+@media (max-width: 1024px) {
+  .stats-container .stat-card {
+    position: relative !important;
+  }
+
+  .stats-container .stat-details {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .stats-container .stat-chart {
+    position: absolute !important;
+    right: 5px !important;
+    bottom: 5px !important;
+    width: 135px !important;
+    height: 80px !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+  }
+
+  .stats-container .stat-chart svg {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .stats-container .stat-chart {
+    width: 125px !important;
+    height: 75px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .stats-container .stat-chart {
+    width: 100px !important;
+    height: 60px !important;
+  }
+}
+
+
+.dashboard-main > .dashboard-content {
+  padding-top: 14px !important;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 1025px) {
+  .dashboard-main > .dashboard-content {
+    padding-top: 50px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard-main > .dashboard-content {
+    padding-top: 30px !important;
+  }
+}

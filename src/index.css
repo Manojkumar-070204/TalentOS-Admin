@@ -4089,13 +4089,24 @@ button {
   white-space: nowrap;
 }
 
+
+
 .statistics-grid .stat-mini-chart {
   position: absolute;
   z-index: 1;
   right: 8px;
   bottom: 5px;
   width: 112px;
+  height: 62px;
   pointer-events: none;
+  overflow: visible;
+}
+
+.statistics-grid .stat-mini-chart svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
 }
 
 @media (max-width: 1200px) {
@@ -4119,7 +4130,24 @@ button {
   }
 
   .statistics-grid .stat-mini-chart {
-    width: 95px;
+    width: 105px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 540px) {
+  .statistics-grid .stat-mini-chart {
+    width: 110px;
+    height: 62px;
+    right: 6px;
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .statistics-grid .stat-mini-chart {
+   
+    height: 58px;
   }
 }
 
@@ -4183,3 +4211,35 @@ button {
 
 
 
+.statistics-grid .stat-mini-chart {
+  position: absolute !important;
+  right: 5px !important;
+  bottom: 5px !important;
+  width: 145px !important;
+  height: 85px !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  z-index: 1 !important;
+}
+
+.statistics-grid .stat-mini-chart svg {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  overflow: visible !important;
+}
+
+@media (max-width: 1024px) {
+  .statistics-grid .stat-mini-chart {
+    width: 135px !important;
+    height: 80px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .statistics-grid .stat-mini-chart {
+    width: 125px !important;
+    height: 75px !important;
+  }
+}

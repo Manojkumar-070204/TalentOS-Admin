@@ -4436,3 +4436,81 @@ html, body {
     width: 40% !important;
   }
 }
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .stats-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .stats-cards-grid .stat-card {
+    position: relative !important;
+    min-height: 112px !important;
+    height: 112px !important;
+    overflow: hidden !important;
+  }
+
+  .stats-cards-grid .stat-info {
+    position: relative !important;
+    z-index: 2 !important;
+    max-width: 65% !important;
+  }
+
+  .stats-cards-grid .stat-ascending-bars {
+    position: absolute !important;
+    right: 12px !important;
+    bottom: 10px !important;
+    width: 90px !important;
+    height: 58px !important;
+    margin: 0 !important;
+    gap: 6px !important;
+    z-index: 1 !important;
+  }
+
+  .stats-cards-grid .stat-ascending-bars span {
+    width: 8px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .stats-cards-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-auto-flow: row !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .stats-cards-grid > .stat-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 128px !important;
+    min-height: 128px !important;
+    grid-column: 1 / -1 !important;
+  }
+
+
+  .stats-cards-grid .stat-info {
+    position: relative !important;
+    z-index: 2 !important;
+    max-width: 65% !important;
+  }
+
+  .stats-cards-grid .stat-ascending-bars {
+    position: absolute !important;
+    right: 12px !important;
+    bottom: 10px !important;
+    width: 78px !important;
+    height: 48px !important;
+    margin: 0 !important;
+    gap: 5px !important;
+    z-index: 1 !important;
+  }
+
+  .stats-cards-grid .stat-ascending-bars span {
+    width: 7px !important;
+  }
+}

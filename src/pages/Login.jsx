@@ -278,6 +278,7 @@ function Login({ onLogin }) {
 <option value="Principal">Principal</option>
 <option value="Super Admin">Super Admin</option>
 <option value="Student">Student</option>
+<option value="Student Profile">Student Profile</option>
                     </select>
                   </div>
 

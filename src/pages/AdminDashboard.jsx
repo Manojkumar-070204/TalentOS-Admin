@@ -716,7 +716,8 @@ function AdminDashboard({ onLogout }) {
             <h1>
               Manage Your Institute
               <br />
-              Smarter with <span>Talent</span>
+              Smarter with <span>Artly</span>
+              <strong>soft</strong><span>Talent</span>
               <strong>OS</strong>
             </h1>
 
