@@ -339,6 +339,7 @@ export default function SuperAdmin({ onLogout }) {
           </div>
         </header>
 
+        <div className="talentos-dashboard-content">
         <section className="welcome-banner-card">
           <div className="welcome-text-content">
             <h1 className="welcome-heading">Super Admin Dashboard</h1>
@@ -836,6 +837,7 @@ export default function SuperAdmin({ onLogout }) {
             </div>
           </div>
         </section>
+        </div>
       </main>
     </div>
   );

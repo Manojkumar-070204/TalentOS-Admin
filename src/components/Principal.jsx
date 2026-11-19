@@ -1202,7 +1202,7 @@ const Principal = ({ onLogout }) => {
                     onTouchMove={handleTouchMoveChart}
                     onTouchStart={handleTouchMoveChart}
                   >
-                    <svg viewBox="0 0 490 185" className="performance-chart-svg" preserveAspectRatio="none">
+                   <svg viewBox="0 0 490 185" className="performance-chart-svg" preserveAspectRatio="xMidYMid meet">
                       <defs>
                         <linearGradient id="perfBlueGradient" x1="0" y1="0" x2="0" y2="1">
                           <stop offset="0%" stopColor="#2563eb" stopOpacity="0.22" />

@@ -25,10 +25,13 @@ html, body {
 
 .talentos-dashboard-container {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
   width: 100%;
   max-width: 100vw;
   position: relative;
+  overflow: hidden;
   background: linear-gradient(180deg, #E5EAFD 0%, #ECF2FE 40%, #F4F6FD 100%);
   color: #0E1B38;
 }
@@ -310,12 +313,15 @@ html, body {
 .talentos-main-area {
   margin-left: var(--talentos-sidebar-w);
   width: calc(100% - var(--talentos-sidebar-w));
+  height: 100%;
   flex: 1;
   min-width: 0;
+  min-height: 0;
   padding: 12px 20px 24px 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -324,6 +330,26 @@ html, body {
   align-items: center;
   justify-content: space-between;
   min-height: 38px;
+  flex: 0 0 auto;
+}
+
+.talentos-dashboard-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.talentos-dashboard-content::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .header-left-wrap {
@@ -3988,5 +4014,425 @@ html, body {
 
   .welcome-art-container {
     width: 46%;
+  }
+}
+
+
+
+
+
+
+
+@media (min-width: 769px) {
+  .quick-actions-card {
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+
+  .quick-actions-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .action-button-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) and (max-height: 850px) {
+  .growth-and-activities-row {
+    flex: 0 0 auto !important;
+    min-height: 220px !important;
+    align-items: stretch !important;
+  }
+
+  .growth-overview-card,
+  .recent-activities-card {
+    height: auto !important;
+    min-height: 220px !important;
+    overflow: visible !important;
+  }
+
+  .recent-activities-card {
+    justify-content: flex-start !important;
+  }
+
+  .activities-timeline {
+    gap: 10px !important;
+    margin-top: 12px !important;
+  }
+
+  .activity-title {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+  }
+
+  .activity-meta {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  .bottom-cards-grid {
+    flex: 0 0 auto !important;
+    min-height: 190px !important;
+    align-items: stretch !important;
+    margin-bottom: 8px !important;
+  }
+
+  .bottom-card {
+    height: auto !important;
+    min-height: 190px !important;
+    overflow: visible !important;
+  }
+
+  .revenue-chart-stage {
+    height: 112px !important;
+    margin-top: 8px !important;
+  }
+
+  .revenue-bar-chart {
+    transform: none !important;
+  }
+
+  .quick-actions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: minmax(72px, auto) !important;
+    gap: 10px !important;
+  }
+
+  .action-button-card {
+    min-height: 72px !important;
+    height: auto !important;
+    padding: 8px 5px !important;
+  }
+
+  .action-name {
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+    overflow: visible !important;
+    overflow-wrap: normal !important;
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  .revenue-bar-chart {
+    transform: translateY(62px) !important;
+  }
+}
+
+
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .talentos-sidebar {
+    height: 100vh !important;
+    min-height: 0 !important;
+    padding-bottom: 12px !important;
+    overflow: hidden !important;
+  }
+
+  .sidebar-nav {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    margin-bottom: 8px !important;
+  }
+
+  .sidebar-promo-card {
+    flex: 0 0 auto !important;
+    margin-top: auto !important;
+    margin-bottom: 5px !important;
+  }
+
+  .sidebar-copyright {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    margin-top: 4px !important;
+    padding-bottom: 3px !important;
+    font-size: 8.5px !important;
+    line-height: 1.3 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+  .bottom-cards-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .institute-distribution-card {
+    min-width: 0 !important;
+    padding: 14px 10px !important;
+  }
+
+  .institute-distribution-card .distribution-body {
+    gap: 8px !important;
+    min-width: 0 !important;
+  }
+
+  .institute-distribution-card .doughnut-chart-wrap {
+    width: 82px !important;
+    height: 82px !important;
+    flex: 0 0 82px !important;
+  }
+
+  .institute-distribution-card .distribution-legend {
+    min-width: 0 !important;
+    gap: 10px !important;
+  }
+
+  .institute-distribution-card .dist-legend-item {
+    min-width: 0 !important;
+    gap: 4px !important;
+  }
+
+  .institute-distribution-card .legend-label-group {
+    min-width: 0 !important;
+    gap: 5px !important;
+  }
+
+  .institute-distribution-card .legend-name {
+    font-size: 10.5px !important;
+    white-space: nowrap !important;
+  }
+
+  .institute-distribution-card .legend-value {
+    flex-shrink: 0 !important;
+    font-size: 10px !important;
+    white-space: nowrap !important;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .talentos-main-area {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .talentos-dashboard-content {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scrollbar-width: none !important;
+  }
+
+  .talentos-dashboard-content > .welcome-banner-card {
+    display: flex !important;
+    position: relative !important;
+    flex: 0 0 94px !important;
+    width: 100% !important;
+    height: 94px !important;
+    min-height: 94px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+  }
+
+  .welcome-text-content {
+    max-width: 48% !important;
+    padding-left: 18px !important;
+  }
+
+  .welcome-art-container {
+    display: block !important;
+    width: 52% !important;
+    height: 100% !important;
+  }
+
+  .stats-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .stat-card,
+  .growth-overview-card,
+  .recent-activities-card,
+  .bottom-card {
+    min-width: 0 !important;
+  }
+
+  .bottom-cards-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .talentos-main-area {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: 100% !important;
+    padding: 10px 14px 18px !important;
+    overflow: hidden !important;
+  }
+
+  .talentos-dashboard-content {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    gap: 12px !important;
+    scrollbar-width: none !important;
+  }
+
+  .talentos-dashboard-content > .welcome-banner-card {
+    display: flex !important;
+    position: relative !important;
+    flex: 0 0 104px !important;
+    width: 100% !important;
+    height: 104px !important;
+    min-height: 104px !important;
+    padding: 12px 16px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+  }
+
+  .welcome-text-content {
+    max-width: 58% !important;
+    padding-left: 0 !important;
+  }
+
+  .welcome-heading {
+    font-size: 19px !important;
+  }
+
+  .welcome-subtitle {
+    font-size: 11px !important;
+  }
+
+  .welcome-art-container {
+    display: block !important;
+    width: 46% !important;
+    height: 100% !important;
+  }
+
+  .stats-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .growth-and-activities-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .bottom-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .quick-actions-card {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .talentos-main-area {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: 100% !important;
+    padding: 8px 10px 14px !important;
+    overflow: hidden !important;
+  }
+
+  .talentos-dashboard-content {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    gap: 10px !important;
+    scrollbar-width: none !important;
+  }
+
+  .talentos-dashboard-content > .welcome-banner-card {
+    display: flex !important;
+    position: relative !important;
+    flex: 0 0 92px !important;
+    width: 100% !important;
+    height: 92px !important;
+    min-height: 92px !important;
+    padding: 10px 12px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+  }
+
+  .welcome-text-content {
+    width: 62% !important;
+    max-width: 62% !important;
+    flex: 0 0 62% !important;
+    padding: 0 !important;
+  }
+
+  .welcome-heading {
+    font-size: 17px !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+    margin-bottom: 4px !important;
+  }
+
+  .welcome-subtitle {
+    font-size: 10.5px !important;
+    line-height: 1.3 !important;
+  }
+
+  .welcome-art-container {
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 43% !important;
+    height: 100% !important;
+  }
+
+  .welcome-art-img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: right center !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .talentos-dashboard-content > .welcome-banner-card {
+    flex-basis: 86px !important;
+    height: 86px !important;
+    min-height: 86px !important;
+  }
+
+  .welcome-heading {
+    font-size: 16px !important;
+  }
+
+  .welcome-art-container {
+    width: 40% !important;
   }
 }
