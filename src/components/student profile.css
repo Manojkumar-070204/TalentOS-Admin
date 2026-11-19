@@ -3527,3 +3527,21 @@ body {
     z-index: 1;
   }
 }
+
+
+@media (width: 768px) {
+  .tos-profile-badge-card {
+    display: grid !important;
+    grid-template-columns: 250px 200px minmax(0, 1fr) !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 14px 16px !important;
+    gap: 0 !important;
+  }
+
+  .tos-profile-badge-card > * {
+    min-width: 0 !important;
+  }
+}

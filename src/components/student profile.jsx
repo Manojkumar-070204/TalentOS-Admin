@@ -1,7 +1,5 @@
 import  { useState, useEffect } from 'react';
 import './student profile.css';
-
-// Exact image assets
 import navbarCap from '../assets/images/navbar-cap.png';
 import dreamBiggerCap from '../assets/images/dream-bigger-cap.png';
 import abhishekAvatar from '../assets/images/abhishek-avatar.png';
@@ -29,8 +27,6 @@ export default function StudentProfile({ onLogout }) {
       setTimeout(() => setShowToast(false), 3000);
     }
   };
-
-  // Form State initialized with the exact values from the uploaded screenshot
   const [formData, setFormData] = useState({
     studentName: 'Abhishek boy',
     email: 'abhi@gmail.com',
@@ -109,8 +105,6 @@ export default function StudentProfile({ onLogout }) {
     onLogout();
   }
 };
-
-  // Keyboard shortcut listener for Ctrl+K
   useEffect(() => {
     const handleKeyDown = (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
@@ -122,8 +116,6 @@ export default function StudentProfile({ onLogout }) {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
-
-  // Close popovers on click outside
   useEffect(() => {
     const handleDocumentClick = (e) => {
       if (!e.target.closest('.tos-user-pill-container') && !e.target.closest('.tos-icon-btn')) {
@@ -134,8 +126,6 @@ export default function StudentProfile({ onLogout }) {
     document.addEventListener('click', handleDocumentClick);
     return () => document.removeEventListener('click', handleDocumentClick);
   }, []);
-
-  // 12 Navigation Items matching sidebar layout
   const navItems = [
     { name: 'Dashboard', icon: 'home' },
     { name: 'My Profile', icon: 'user' },
@@ -337,7 +327,7 @@ export default function StudentProfile({ onLogout }) {
 
   return (
     <div className="tos-dashboard-layout">
-      {/* Mobile Sidebar Backdrop Overlay */}
+      
       {isMobileSidebarOpen && (
         <div
           className="tos-sidebar-overlay"
@@ -346,11 +336,8 @@ export default function StudentProfile({ onLogout }) {
         />
       )}
 
-      {/* ====================================================================
-          1. EXACT LEFT SIDEBAR (Desktop Fixed & Mobile Slide-Out Drawer)
-          ==================================================================== */}
       <aside className={`tos-sidebar ${isMobileSidebarOpen ? 'open' : ''}`}>
-        {/* Brand Header with Cap & Two-Line Logo (Artlysoft / TalentOS) */}
+        
         <div className="tos-brand">
           <img
             src={navbarCap}
@@ -366,7 +353,6 @@ export default function StudentProfile({ onLogout }) {
             </span>
           </div>
 
-          {/* Close button inside sidebar (mobile only) */}
           <button
             type="button"
             className="tos-mobile-sidebar-close"
@@ -380,7 +366,6 @@ export default function StudentProfile({ onLogout }) {
           </button>
         </div>
 
-        {/* Navigation Menu List */}
         <ul className="tos-nav-list">
           {navItems.map((item) => (
             <li
@@ -402,9 +387,8 @@ export default function StudentProfile({ onLogout }) {
           ))}
         </ul>
 
-        {/* Sidebar Bottom Section with Dream Bigger Promo Card */}
         <div className="tos-sidebar-bottom">
-          {/* Dream Bigger Promo Box */}
+          
           <div className="tos-promo-card">
             <div className="tos-promo-wave-glow"></div>
             <img
@@ -433,22 +417,16 @@ export default function StudentProfile({ onLogout }) {
             </button>
           </div>
 
-          {/* Sidebar Copyright Footer */}
           <div className="tos-sidebar-footer">
             &copy; 2026 TalentOS. All rights reserved. v2.0.0
           </div>
         </div>
       </aside>
 
-      {/* ====================================================================
-          2. MAIN CONTENT AREA WITH EXACT TOP BAR (media_1794913936778_9448fda0.png)
-          ==================================================================== */}
       <main className="tos-main-content">
-        {/* ====================================================================
-            EXACT TOPBAR (100% Pixel-Perfect Match to media_1794998141613_aa14f2a8.png)
-            ==================================================================== */}
+        
         <header className="tos-topbar">
-          {/* Mobile Menu Toggle Button */}
+          
           <button
             type="button"
             className="tos-mobile-menu-btn"
@@ -462,7 +440,6 @@ export default function StudentProfile({ onLogout }) {
             </svg>
           </button>
 
-          {/* Search Box: Exact Pale Periwinkle Pill (#dee5fd) */}
           <div className="tos-search-box">
             <svg className="tos-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8"/><line x1="21" x2="21" y1="21" y2="16.65"/>
@@ -476,7 +453,6 @@ export default function StudentProfile({ onLogout }) {
             />
           </div>
 
-          {/* Central Wave Container: Clean Authentic Wave Matching Reference */}
           <div className="tos-topbar-wave-container" aria-hidden="true">
             <img
               src={topWaveImg}
@@ -485,9 +461,8 @@ export default function StudentProfile({ onLogout }) {
             />
           </div>
 
-          {/* Right Controls: Bare Bell & User Profile Widget */}
           <div className="tos-topbar-right">
-            {/* Bell Icon with Red Badge (Bare, without circle frame) */}
+            
             <div
               className="tos-icon-btn"
               onClick={() => {
@@ -521,7 +496,6 @@ export default function StudentProfile({ onLogout }) {
               )}
             </div>
 
-            {/* User Profile Widget & Dropdown Menu (media_1795002338994_1648f83e.png) */}
             <div className={`tos-user-pill-container ${showUserDropdown ? 'open' : ''}`}>
               <div
                 className="tos-user-pill"
@@ -553,10 +527,9 @@ export default function StudentProfile({ onLogout }) {
                 </div>
               </div>
 
-              {/* Exact Dropdown Popover matching uploaded crop */}
               {showUserDropdown && (
                 <div className="tos-user-dropdown-menu" onClick={(e) => e.stopPropagation()}>
-                  {/* Top Header: Avatar + Name + Email */}
+                  
                   <div className="tos-user-dropdown-header">
                     <div className="tos-user-dropdown-avatar">
                       {uploadedAvatarUrl ? (
@@ -573,7 +546,6 @@ export default function StudentProfile({ onLogout }) {
 
                   <div className="tos-user-dropdown-divider" />
 
-                  {/* Menu Options: My Profile, Settings, Logout */}
                   <div className="tos-user-dropdown-list">
                     <button
                       type="button"
@@ -626,11 +598,8 @@ export default function StudentProfile({ onLogout }) {
           </div>
         </header>
 
-        {/* ====================================================================
-            STUDENT PROFILE HEADER BANNER (media_1794915626969_18b06fb7.jpg)
-            ==================================================================== */}
         <section className="tos-profile-header-banner">
-          {/* Background Soft Fluid Wave connecting from Top Bar */}
+          
           <div className="tos-banner-wave-container" aria-hidden="true">
             <svg
               className="tos-banner-wave-svg"
@@ -662,7 +631,6 @@ export default function StudentProfile({ onLogout }) {
             </svg>
           </div>
 
-          {/* Left: Breadcrumbs & Title */}
           <div className="tos-breadcrumb-container">
             <div className="tos-breadcrumbs">
               <span className="tos-bc-parent">Dashboard</span>
@@ -673,7 +641,6 @@ export default function StudentProfile({ onLogout }) {
             <p className="tos-page-subtitle">Enter your student information and save.</p>
           </div>
 
-          {/* Right: Exact Profile Badge Card matching uploaded image */}
           <div className="tos-profile-badge-card">
             <img
               src={uploadedAvatarUrl || abhishekAvatar}
@@ -693,9 +660,9 @@ export default function StudentProfile({ onLogout }) {
         </section>
 
         <form onSubmit={handleSaveProfile} className="tos-form-wrapper">
-          {/* Row 1: Student Information & Academic Information (media_1794916114878_57ebd813.jpg) */}
+          
           <div className="tos-grid-row tos-grid-row-top">
-            {/* Card 1: Student Information */}
+            
             <div className="tos-card tos-card-student-info">
               <div className="tos-card-header">
                 <span className="tos-card-header-icon">{renderIcon('user-solid')}</span>
@@ -750,7 +717,6 @@ export default function StudentProfile({ onLogout }) {
                 </div>
               </div>
 
-              {/* Upload Image Field (Matching exact Username input style: media_1794917574664_eca6f7fd.png) */}
               <div className="tos-form-group no-margin">
                 <label className="tos-label" htmlFor="tos-image-file-input">
                   Upload Image
@@ -777,9 +743,8 @@ export default function StudentProfile({ onLogout }) {
               </div>
             </div>
 
-            {/* Right Column: Academic Information + Attendance (Exact Match to media_1794994587884_f81a9c44.jpg) */}
             <div className="tos-col-academic-attendance">
-              {/* Card 2: Academic Information */}
+              
               <div className="tos-card tos-card-academic-info">
               <div className="tos-card-header">
                 <span className="tos-card-header-icon tos-card-header-icon-academic">{renderIcon('academic-solid')}</span>
@@ -913,10 +878,8 @@ export default function StudentProfile({ onLogout }) {
                 </div>
               </div>
 
-
               </div>
 
-              {/* Card 3: Attendance (Exact Match to media_1794994587884_f81a9c44.jpg) */}
               <div className="tos-card tos-card-attendance">
                 <div className="tos-card-header">
                   <span className="tos-card-header-icon tos-card-header-icon-attendance">
@@ -932,7 +895,7 @@ export default function StudentProfile({ onLogout }) {
                 </div>
 
                 <div className="tos-attendance-body">
-                  {/* Left Pill: 92% Ring + Present Days */}
+                  
                   <div className="tos-attendance-stats-pill">
                     <div className="tos-attendance-ring-wrap">
                       <svg className="tos-attendance-ring-svg" viewBox="0 0 40 40">
@@ -959,7 +922,6 @@ export default function StudentProfile({ onLogout }) {
                     </div>
                   </div>
 
-                  {/* Middle: Check In & Check Out buttons (Exact match to media_1794999296446_9ee53e16.jpg) */}
                   <div className="tos-attendance-actions">
                     <button
                       type="button"
@@ -1002,7 +964,6 @@ export default function StudentProfile({ onLogout }) {
                     </button>
                   </div>
 
-                  {/* Right: Last Attendance */}
                   <div className="tos-attendance-last">
                     <span className="tos-att-calendar-icon">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -1023,9 +984,8 @@ export default function StudentProfile({ onLogout }) {
             </div>
           </div>
 
-          {/* Row 2: Personal Information & Guardian Information */}
           <div className="tos-grid-row tos-grid-row-bottom">
-            {/* Card 3: Personal Information */}
+            
             <div className="tos-card">
               <div className="tos-card-header">
                 <span className="tos-card-header-icon">{renderIcon('user-solid')}</span>
@@ -1181,7 +1141,6 @@ export default function StudentProfile({ onLogout }) {
               </div>
             </div>
 
-            {/* Card 4: Guardian Information */}
             <div className="tos-card" style={{ display: 'flex', flexDirection: 'column' }}>
               <div className="tos-card-header">
                 <span className="tos-card-header-icon tos-card-header-icon-guardian">{renderIcon('shield-check-solid')}</span>
@@ -1232,10 +1191,9 @@ export default function StudentProfile({ onLogout }) {
                     />
                   </div>
                 </div>
-                <div>{/* spacer for alignment with media_1794995232392_b1ca30ab.jpg */}</div>
+                <div></div>
               </div>
 
-              {/* Security Shield Banner */}
               <div className="tos-security-banner">
                 <div className="tos-security-left">
                   <div className="tos-shield-icon-badge">
@@ -1254,7 +1212,6 @@ export default function StudentProfile({ onLogout }) {
             </div>
           </div>
 
-          {/* Action Footer */}
           <div className="tos-action-footer">
             <button
               type="button"
@@ -1277,7 +1234,6 @@ export default function StudentProfile({ onLogout }) {
         </form>
       </main>
 
-      {/* Toast Notification */}
       {showToast && (
         <div className="tos-toast">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2.5">
@@ -1290,3 +1246,4 @@ export default function StudentProfile({ onLogout }) {
     </div>
   );
 }
+
