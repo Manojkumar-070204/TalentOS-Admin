@@ -5,7 +5,7 @@ import dreamBiggerCap from '../assets/images/dream-bigger-cap.png';
 import abhishekAvatar from '../assets/images/abhishek-avatar.png';
 import topWaveImg from '../assets/images/top-wave-transparent.png';
 
-export default function StudentProfile({ onLogout }) {
+export default function StudentProfile({ onLogout , onSaveProfile }) {
   const [activeNav, setActiveNav] = useState('My Profile');
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
@@ -92,11 +92,18 @@ export default function StudentProfile({ onLogout }) {
   };
 
   const handleSaveProfile = (e) => {
-    e.preventDefault();
-    setToastMessage('Student Profile saved successfully!');
-    setShowToast(true);
-    setTimeout(() => setShowToast(false), 3000);
-  };
+  e.preventDefault();
+
+  setToastMessage('Student Profile saved successfully!');
+  setShowToast(true);
+
+  setTimeout(() => {
+    setShowToast(false);
+    if (onSaveProfile) {
+      onSaveProfile(formData);
+    }
+  }, 1000);
+};
 
   const handleLogout = () => {
   setShowUserDropdown(false);

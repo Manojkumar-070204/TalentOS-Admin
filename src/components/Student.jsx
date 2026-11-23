@@ -14,7 +14,7 @@ import aiCapImg from '../assets/images/ai-cap.png';
 
 export default function Student({ user, onLogout }) {
   const [activeNav, setActiveNav] = useState('Dashboard');
-  const [activeTimeTab, setActiveTimeTab] = useState('Today');
+
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
@@ -938,291 +938,51 @@ export default function Student({ user, onLogout }) {
           </section>
 
 
-          <section className="lower-grid">
-
-            <div className="grid-card timetable-card">
-              <div className="grid-card-header">
-                <div className="card-title-wrap">
-                  <svg className="card-header-svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <rect x="3" y="3" width="18" height="18" rx="4" fill="#2563eb" />
-                    <rect x="7" y="1" width="2" height="4" rx="1" fill="#2563eb" />
-                    <rect x="15" y="1" width="2" height="4" rx="1" fill="#2563eb" />
-                    <path d="M3 8.5h18" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" />
-                    <circle cx="8" cy="13" r="1.2" fill="#ffffff" />
-                    <circle cx="12" cy="13" r="1.2" fill="#ffffff" />
-                    <circle cx="16" cy="13" r="1.2" fill="#ffffff" />
-                    <circle cx="8" cy="17" r="1.2" fill="#ffffff" />
-                    <circle cx="12" cy="17" r="1.2" fill="#ffffff" />
-                    <circle cx="16" cy="17" r="1.2" fill="#ffffff" />
-                  </svg>
-                  <h4>My Timetable</h4>
-                </div>
-                <a href="#schedule" className="card-header-link">
-                  View Full Schedule &rarr;
-                </a>
+          <section className="attendance-tracking-section">
+            <div className="reference-section-heading">
+              <div>
+                <h3>Attendance Tracking</h3>
+                <p>Daily records, period logs, and historical attendance summary</p>
               </div>
-
-              <div className="timetable-tabs">
-                {['Today', 'Tomorrow', 'This Week'].map((tab) => (
-                  <button
-                    key={tab}
-                    className={`timetable-tab ${activeTimeTab === tab ? 'active' : ''}`}
-                    onClick={() => setActiveTimeTab(tab)}
-                  >
-                    {tab}
-                  </button>
-                ))}
-              </div>
-
-              <div className="timetable-list">
-                <div className="timetable-item">
-                  <span className="time-badge">09:00 AM - 10:00 AM</span>
-                  <span className="course-name-label">Python Programming</span>
-                  <span className="room-label">Room A-101</span>
-                </div>
-                <div className="timetable-item">
-                  <span className="time-badge">10:15 AM - 11:15 AM</span>
-                  <span className="course-name-label">Database Management</span>
-                  <span className="room-label">Room B-201</span>
-                </div>
-                <div className="timetable-item">
-                  <span className="time-badge">01:00 PM - 02:00 PM</span>
-                  <span className="course-name-label">Web Technologies</span>
-                  <span className="room-label">Lab-3</span>
-                </div>
-                <div className="timetable-item">
-                  <span className="time-badge">03:00 PM - 04:00 PM</span>
-                  <span className="course-name-label">Soft Skills</span>
-                  <span className="room-label">Seminar Hall</span>
-                </div>
+              <button type="button" onClick={() => setActiveNav('Attendance')}>View All Records <span>›</span></button>
+            </div>
+            <div className="reference-attendance-grid">
+              <button type="button" className="reference-attendance-card" onClick={() => setActiveNav('Attendance')}>
+                <span className="reference-attendance-icon blue"><svg viewBox="0 0 24 24"><path d="M9 5H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3"/><path d="M9 3h6v4H9zM8 13l2 2 5-5"/></svg></span>
+                <strong>My Attendance</strong><p>Comprehensive semester metrics and attendance percentage</p>
+              </button>
+              <button type="button" className="reference-attendance-card" onClick={() => setActiveNav('Attendance')}>
+                <span className="reference-attendance-icon teal"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h2M14 14h2M8 17h2"/></svg></span>
+                <strong>Daily Attendance</strong><p>Review day-by-day punch records, check-in timestamps and status</p>
+              </button>
+              <button type="button" className="reference-attendance-card" onClick={() => setActiveNav('Attendance')}>
+                <span className="reference-attendance-icon orange"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+                <strong>Period Attendance</strong><p>Subject-wise period presence and timetable hours breakdown</p>
+              </button>
+              <button type="button" className="reference-attendance-card" onClick={() => setActiveNav('Attendance')}>
+                <span className="reference-attendance-icon violet"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V4h8v3M8 11v6M16 11v6"/></svg></span>
+                <strong>Attendance History</strong><p>Filter past academic months, download reports and verify leaves</p>
+              </button>
+            </div>
+          </section>
+          <section className="reference-services-grid">
+            <div className="reference-services-panel">
+              <div className="reference-services-heading"><span className="reference-heading-icon blue"><svg viewBox="0 0 24 24"><path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/></svg></span><h3>Academic Services</h3><span className="reference-heading-pill">Curriculum</span></div>
+              <div className="reference-service-list">
+                <button type="button" className="reference-service-row" onClick={() => setActiveNav('My Courses')}><span className="reference-row-icon blue"><svg viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM15 3v5h4M8 12h8M8 16h8"/></svg></span><span className="reference-row-copy"><strong>Enrolled Subjects</strong><small>Course syllabus, lecture notes &amp; credits</small></span><span className="reference-status blue">Active</span></button>
+                <button type="button" className="reference-service-row" onClick={() => setActiveNav('Assignments')}><span className="reference-row-icon orange"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 3V2h6v1M8 12l2 2 5-5"/></svg></span><span className="reference-row-copy"><strong>Assignments &amp; Quizzes</strong><small>Pending homework, tests and submissions</small></span><span className="reference-status red">2 Due</span></button>
+                <button type="button" className="reference-service-row" onClick={() => setActiveNav('Results')}><span className="reference-row-icon green"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8 12l-2 9 6-3 6 3-2-9"/></svg></span><span className="reference-row-copy"><strong>Examination Results</strong><small>Semester grade reports, GPA &amp; transcript</small></span><span className="reference-status green">Published</span></button>
               </div>
             </div>
-
-
-            <div className="grid-card assignments-card">
-              <div className="grid-card-header">
-                <div className="card-title-wrap">
-                  <svg className="card-header-svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <rect x="3" y="3" width="18" height="18" rx="4" fill="#2563eb" />
-                    <path d="m8 12 3 3 5-6" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <h4>Upcoming Assignments</h4>
-                </div>
-                <a href="#assignments" className="card-header-link">
-                  View All &rarr;
-                </a>
-              </div>
-
-              <div className="assignment-list">
-
-                <div className="assignment-item">
-                  <div className="assignment-icon-wrap">
-                    <svg width="34" height="34" viewBox="0 0 36 36" fill="none" className="assignment-svg">
-                      <circle cx="18" cy="18" r="18" fill="#092e20" />
-                      <text
-                        x="18"
-                        y="20.5"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                        fill="#ffffff"
-                        fontSize="9.5"
-                        fontWeight="800"
-                        fontFamily="system-ui, -apple-system, sans-serif"
-                        letterSpacing="-0.4px"
-                      >
-                        django
-                      </text>
-                    </svg>
-                  </div>
-                  <div className="assignment-details">
-                    <h5 className="assignment-title">Django Project Submission</h5>
-                    <span className="assignment-due">Due: Nov 16, 2026</span>
-                  </div>
-                  <span className="days-left-badge red-badge">2 Days Left</span>
-                </div>
-
-
-                <div className="assignment-item">
-                  <div className="assignment-icon-wrap">
-                    <svg width="34" height="34" viewBox="0 0 36 36" fill="none" className="assignment-svg">
-                      <ellipse cx="18" cy="18" rx="5.5" ry="14" stroke="#00d8ff" strokeWidth="1.8" />
-                      <ellipse cx="18" cy="18" rx="5.5" ry="14" stroke="#00d8ff" strokeWidth="1.8" transform="rotate(60 18 18)" />
-                      <ellipse cx="18" cy="18" rx="5.5" ry="14" stroke="#00d8ff" strokeWidth="1.8" transform="rotate(120 18 18)" />
-                      <circle cx="18" cy="18" r="2.8" fill="#00d8ff" />
-                    </svg>
-                  </div>
-                  <div className="assignment-details">
-                    <h5 className="assignment-title">React Components Task</h5>
-                    <span className="assignment-due">Due: Nov 18, 2026</span>
-                  </div>
-                  <span className="days-left-badge orange-badge">4 Days Left</span>
-                </div>
-
-
-                <div className="assignment-item">
-                  <div className="assignment-icon-wrap">
-                    <svg width="34" height="34" viewBox="0 0 36 36" fill="none" className="assignment-svg">
-                      <ellipse cx="18" cy="9.5" rx="10" ry="3.8" fill="#3b82f6" />
-                      <ellipse cx="18" cy="9" rx="8.5" ry="2.6" fill="#60a5fa" fillOpacity="0.5" />
-                      <path d="M8 9.5v5c0 2.1 4.5 3.8 10 3.8s10-1.7 10-3.8v-5c0 2.1-4.5 3.8-10 3.8s-10-1.7-10-3.8z" fill="#2563eb" />
-                      <path d="M8 15.5v5c0 2.1 4.5 3.8 10 3.8s10-1.7 10-3.8v-5c0 2.1-4.5 3.8-10 3.8s-10-1.7-10-3.8z" fill="#1d4ed8" />
-                      <path d="M8 21.5v5c0 2.1 4.5 3.8 10 3.8s10-1.7 10-3.8v-5c0 2.1-4.5 3.8-10 3.8s-10-1.7-10-3.8z" fill="#1e40af" />
-                    </svg>
-                  </div>
-                  <div className="assignment-details">
-                    <h5 className="assignment-title">Database Query Practice</h5>
-                    <span className="assignment-due">Due: Nov 20, 2026</span>
-                  </div>
-                  <span className="days-left-badge blue-badge">6 Days Left</span>
-                </div>
-              </div>
-            </div>
-
-
-            <div className="grid-card attendance-card">
-              <div className="grid-card-header">
-                <div className="card-title-wrap">
-                  <svg className="card-header-svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <rect x="3" y="3" width="18" height="18" rx="4" fill="#2563eb" />
-                    <path d="m8 12 3 3 5-6" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <h4>Attendance Overview</h4>
-                </div>
-              </div>
-
-              <div className="attendance-body">
-
-                <div className="donut-chart-container">
-                  <svg viewBox="0 0 100 100" className="donut-chart">
-                    <circle cx="50" cy="50" r="38" className="donut-bg" strokeWidth="12" />
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="38"
-                      className="donut-present"
-                      strokeWidth="12"
-                      strokeDasharray="213.9 238.76"
-                      strokeDashoffset="0"
-                    />
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="38"
-                      className="donut-absent"
-                      strokeWidth="12"
-                      strokeDasharray="11.56 238.76"
-                      strokeDashoffset="-216.4"
-                    />
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="38"
-                      className="donut-leave"
-                      strokeWidth="12"
-                      strokeDasharray="5.78 238.76"
-                      strokeDashoffset="-230.46"
-                    />
-                  </svg>
-                  <div className="donut-center-label">
-                    <span className="donut-percent">92.5%</span>
-                  </div>
-                </div>
-
-
-                <div className="attendance-legend">
-                  <div className="legend-row">
-                    <span className="legend-indicator blue-dot"></span>
-                    <span className="legend-name">Present</span>
-                    <span className="legend-count">37</span>
-                  </div>
-                  <div className="legend-row">
-                    <span className="legend-indicator orange-dot"></span>
-                    <span className="legend-name">Absent</span>
-                    <span className="legend-count">2</span>
-                  </div>
-                  <div className="legend-row">
-                    <span className="legend-indicator gray-dot"></span>
-                    <span className="legend-name">Leave</span>
-                    <span className="legend-count">1</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="attendance-footer">
-                <button className="view-details-btn">
-                  View Details &rarr;
-                </button>
-              </div>
-            </div>
-
-
-            <div className="grid-card notifications-card">
-              <div className="grid-card-header">
-                <div className="card-title-wrap">
-                  <svg className="card-header-svg notif-bell-svg" width="18" height="18" viewBox="0 0 24 24" fill="#2563eb">
-                    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" />
-                  </svg>
-                  <h4>Notifications</h4>
-                </div>
-                <a href="#notifications" className="card-header-link">
-                  View All &rarr;
-                </a>
-              </div>
-
-              <div className="notifications-list">
-
-                <div className="notification-row">
-                  <div className="notif-icon-circle orange-light">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                      <rect x="8" y="2" width="8" height="4" rx="1" />
-                      <line x1="9" y1="12" x2="15" y2="12" />
-                      <line x1="9" y1="16" x2="13" y2="16" />
-                    </svg>
-                  </div>
-                  <div className="notif-text-wrap">
-                    <p className="notif-title">Your assignment is due soon</p>
-                    <span className="notif-sub">(Django Project Submission)</span>
-                  </div>
-                  <span className="notif-time">2h ago</span>
-                </div>
-
-
-                <div className="notification-row">
-                  <div className="notif-icon-circle blue-light">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="3" y="4" width="18" height="18" rx="2" />
-                      <line x1="16" y1="2" x2="16" y2="6" />
-                      <line x1="8" y1="2" x2="8" y2="6" />
-                      <line x1="3" y1="10" x2="21" y2="10" />
-                      <path d="m9 16 2 2 4-4" />
-                    </svg>
-                  </div>
-                  <div className="notif-text-wrap">
-                    <p className="notif-title">Exam schedule released</p>
-                    <span className="notif-sub">(End Semester Exams)</span>
-                  </div>
-                  <span className="notif-time">1d ago</span>
-                </div>
-
-
-                <div className="notification-row">
-                  <div className="notif-icon-circle purple-light">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="2" y="7" width="20" height="14" rx="2" />
-                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                    </svg>
-                  </div>
-                  <div className="notif-text-wrap">
-                    <p className="notif-title">New job opportunities</p>
-                    <span className="notif-sub">(Tech Mahindra)</span>
-                  </div>
-                  <span className="notif-time">2d ago</span>
-                </div>
+            <div className="reference-services-panel">
+              <div className="reference-services-heading"><span className="reference-heading-icon violet"><svg viewBox="0 0 24 24"><path d="M12 2l2.3 6.1L21 10l-6.7 2.1L12 19l-2.3-6.9L3 10l6.7-1.9zM19 16l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></svg></span><h3>Career &amp; AI Intelligence</h3><span className="reference-heading-pill pink">TalentOS Hub</span></div>
+              <div className="reference-service-list">
+                <button type="button" className="reference-service-row" onClick={() => setActiveNav('Dashboard')}><span className="reference-row-icon blue"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6V4h8v2M8 12h.01M12 12h.01M16 12h.01M8 16h8"/></svg></span><span className="reference-row-copy"><strong>AI Tutor &amp; Mentor</strong><small>Personalized exam prep &amp; doubts resolver</small></span><span className="reference-status blue">24/7 AI</span></button>
+                <button type="button" className="reference-service-row" onClick={() => setActiveNav('Resume Builder')}><span className="reference-row-icon green"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M6 16c1-2 5-2 6 0M14 9h4M14 13h4"/></svg></span><span className="reference-row-copy"><strong>Smart Resume Builder</strong><small>Create ATS-friendly CVs verified by campus</small></span><span className="reference-status green">Ready</span></button>
+                <button type="button" className="reference-service-row" onClick={() => setActiveNav('Placement')}><span className="reference-row-icon pink"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V4h8v3M12 7v14M3 12h18"/></svg></span><span className="reference-row-copy"><strong>Placement &amp; Internships</strong><small>Explore campus recruiting drives and offers</small></span><span className="reference-status pink">Open Drives</span></button>
               </div>
             </div>
           </section>
-
 
           <section className="placement-banner">
 

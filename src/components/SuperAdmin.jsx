@@ -12,6 +12,8 @@ import {
   FileText,
   Users,
   UserPlus,
+  School,
+  GraduationCap,
   BarChart2,
   BarChart3,
   Sparkles,
@@ -20,7 +22,6 @@ import {
   Rocket,
   Bell,
   ChevronDown,
-  TrendingUp,
   Menu,
   X,
   User,
@@ -30,7 +31,7 @@ import {
 
 export default function SuperAdmin({ onLogout }) {
   const [activeMenu, setActiveMenu] = useState('Dashboard');
-  const [timeFilter, setTimeFilter] = useState('1M');
+  
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const profileDropdownRef = useRef(null);
@@ -464,128 +465,125 @@ export default function SuperAdmin({ onLogout }) {
         </section>
 
         <section className="growth-and-activities-row">
-          <div className="growth-overview-card">
-            <div className="card-header-row">
-              <div className="card-title-group">
-                <div className="title-icon-blue">
-                  <TrendingUp size={16} strokeWidth={2.5} />
-                </div>
-                <h3 className="card-title">Platform Growth Overview</h3>
-              </div>
+         <div className="overview-metric-cards-grid">
+  <div className="overview-metric-card">
+    <div className="overview-card-header">
+      <div className="overview-card-icon-wrap icon-blue">
+        <School size={17} strokeWidth={2.2} />
+      </div>
+      <button
+        type="button"
+        className="overview-card-view-btn"
+        onClick={() => handleNavClick('Institutes')}
+        aria-label="View all institutes"
+      >
+        <span>View All</span>
+        <span className="view-arrow">→</span>
+      </button>
+    </div>
+    <div className="overview-card-content">
+      <span className="overview-card-label">Institutes</span>
+      <h3 className="overview-card-value">120</h3>
+      <div className="overview-card-trend">
+        <span className="trend-growth-badge">↑ +12%</span>
+        <span className="trend-subtext">active campuses</span>
+      </div>
+    </div>
+  </div>
 
-              <div className="time-filter-pills">
-                {['1M', '3M', '6M', '1Y'].map((filter) => (
-                  <button
-                    key={filter}
-                    className={`filter-btn ${timeFilter === filter ? 'active' : ''}`}
-                    onClick={() => setTimeFilter(filter)}
-                  >
-                    {filter}
-                  </button>
-                ))}
-              </div>
-            </div>
+  <div className="overview-metric-card">
+    <div className="overview-card-header">
+      <div className="overview-card-icon-wrap icon-orange">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" strokeWidth="2.2"
+          strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <circle cx="12" cy="10" r="2.8" />
+          <path d="M7.5 17.5a4.5 4.5 0 0 1 9 0" />
+        </svg>
+      </div>
+      <button
+        type="button"
+        className="overview-card-view-btn"
+        onClick={() => handleNavClick('Create Admin')}
+        aria-label="View all institute admins"
+      >
+        <span>View All</span>
+        <span className="view-arrow">→</span>
+      </button>
+    </div>
+    <div className="overview-card-content">
+      <span className="overview-card-label">Institute Admins</span>
+      <h3 className="overview-card-value">115</h3>
+      <div className="overview-card-trend">
+        <span className="trend-growth-badge">↑ +8%</span>
+        <span className="trend-subtext">vs last month</span>
+      </div>
+    </div>
+  </div>
 
-            <div className="chart-legend-row">
-              <div className="legend-item">
-                <span className="legend-dot dot-blue"></span>
-                <span className="legend-text">Institutes</span>
-              </div>
-              <div className="legend-item">
-                <span className="legend-dot dot-orange"></span>
-                <span className="legend-text">Students</span>
-              </div>
-            </div>
+  <div className="overview-metric-card">
+    <div className="overview-card-header">
+      <div className="overview-card-icon-wrap icon-purple">
+        <GraduationCap size={17} strokeWidth={2.2} />
+      </div>
+      <button
+        type="button"
+        className="overview-card-view-btn"
+        onClick={() => handleNavClick('Users')}
+        aria-label="View all principals"
+      >
+        <span>View All</span>
+        <span className="view-arrow">→</span>
+      </button>
+    </div>
+    <div className="overview-card-content">
+      <span className="overview-card-label">Principals</span>
+      <h3 className="overview-card-value">118</h3>
+      <div className="overview-card-trend">
+        <span className="trend-growth-badge">↑ +10%</span>
+        <span className="trend-subtext">total assigned</span>
+      </div>
+    </div>
+  </div>
 
-            <div className="growth-chart-wrap">
-              <svg viewBox="0 0 570 162" className="growth-chart-svg" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="institutesAreaGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#2864F5" stopOpacity="0.22" />
-                    <stop offset="100%" stopColor="#2864F5" stopOpacity="0.0" />
-                  </linearGradient>
-
-                  <linearGradient id="studentsAreaGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#F97316" stopOpacity="0.16" />
-                    <stop offset="100%" stopColor="#F97316" stopOpacity="0.0" />
-                  </linearGradient>
-                </defs>
-
-                <line x1="34" y1="20" x2="555" y2="20" stroke="#F1F5F9" strokeWidth="1" />
-                <line x1="34" y1="50" x2="555" y2="50" stroke="#F1F5F9" strokeWidth="1" />
-                <line x1="34" y1="80" x2="555" y2="80" stroke="#F1F5F9" strokeWidth="1" />
-                <line x1="34" y1="110" x2="555" y2="110" stroke="#F1F5F9" strokeWidth="1" />
-                <line x1="34" y1="140" x2="555" y2="140" stroke="#F1F5F9" strokeWidth="1" />
-
-                <text x="28" y="23" className="axis-label" textAnchor="end">40K</text>
-                <text x="28" y="53" className="axis-label" textAnchor="end">30K</text>
-                <text x="28" y="83" className="axis-label" textAnchor="end">20K</text>
-                <text x="28" y="113" className="axis-label" textAnchor="end">10K</text>
-                <text x="28" y="143" className="axis-label" textAnchor="end">0</text>
-
-                <text x="50" y="155" className="axis-label" textAnchor="middle">Oct 1</text>
-                <text x="147" y="155" className="axis-label" textAnchor="middle">Oct 7</text>
-                <text x="244" y="155" className="axis-label" textAnchor="middle">Oct 14</text>
-                <text x="341" y="155" className="axis-label" textAnchor="middle">Oct 21</text>
-                <text x="438" y="155" className="axis-label" textAnchor="middle">Oct 28</text>
-                <text x="535" y="155" className="axis-label" textAnchor="middle">Oct 31</text>
-
-                <path
-                  d="M 50.0,99.5 C 58.1,98.0 82.3,93.7 98.5,90.5 C 114.7,87.3 130.8,82.1 147.0,80.6 C 163.2,79.0 179.3,83.4 195.5,81.2 C 211.7,79.0 227.8,68.9 244.0,67.4 C 260.2,66.0 276.3,74.5 292.5,72.5 C 308.7,70.5 324.8,57.8 341.0,55.4 C 357.2,53.1 373.3,59.7 389.5,58.4 C 405.7,57.1 421.8,49.4 438.0,47.6 C 454.2,45.8 470.3,51.2 486.5,47.6 C 502.7,44.0 526.9,29.6 535.0,26.0 L 535.0,140 L 50.0,140 Z"
-                  fill="url(#institutesAreaGrad)"
-                />
-                <path
-                  d="M 50.0,99.5 C 58.1,98.0 82.3,93.7 98.5,90.5 C 114.7,87.3 130.8,82.1 147.0,80.6 C 163.2,79.0 179.3,83.4 195.5,81.2 C 211.7,79.0 227.8,68.9 244.0,67.4 C 260.2,66.0 276.3,74.5 292.5,72.5 C 308.7,70.5 324.8,57.8 341.0,55.4 C 357.2,53.1 373.3,59.7 389.5,58.4 C 405.7,57.1 421.8,49.4 438.0,47.6 C 454.2,45.8 470.3,51.2 486.5,47.6 C 502.7,44.0 526.9,29.6 535.0,26.0"
-                  fill="none"
-                  stroke="#2864F5"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-                <circle cx="50.0" cy="99.5" r="3.5" fill="#2864F5" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="98.5" cy="90.5" r="3.5" fill="#2864F5" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="147.0" cy="80.6" r="3.5" fill="#2864F5" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="195.5" cy="81.2" r="3.5" fill="#2864F5" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="244.0" cy="67.4" r="3.5" fill="#2864F5" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="292.5" cy="72.5" r="3.5" fill="#2864F5" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="341.0" cy="55.4" r="3.5" fill="#2864F5" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="389.5" cy="58.4" r="3.5" fill="#2864F5" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="438.0" cy="47.6" r="3.5" fill="#2864F5" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="486.5" cy="47.6" r="3.5" fill="#2864F5" stroke="#FFFFFF" strokeWidth="1.5" />
-
-                <rect x="520" y="16" width="32" height="18" rx="9" fill="#2864F5" />
-                <text x="536" y="29" fill="#FFFFFF" fontSize="9.5" fontWeight="700" textAnchor="middle">
-                  38K
-                </text>
-
-                <path
-                  d="M 50.0,125.0 C 58.1,123.6 82.3,119.2 98.5,116.6 C 114.7,114.0 130.8,110.6 147.0,109.4 C 163.2,108.2 179.3,111.1 195.5,109.4 C 211.7,107.8 227.8,100.7 244.0,99.5 C 260.2,98.3 276.3,103.8 292.5,102.5 C 308.7,101.2 324.8,93.2 341.0,92.0 C 357.2,90.8 373.3,96.7 389.5,95.6 C 405.7,94.5 421.8,87.2 438.0,85.4 C 454.2,83.6 470.3,86.4 486.5,84.5 C 502.7,82.6 526.9,75.8 535.0,74.0 L 535.0,140 L 50.0,140 Z"
-                  fill="url(#studentsAreaGrad)"
-                />
-                <path
-                  d="M 50.0,125.0 C 58.1,123.6 82.3,119.2 98.5,116.6 C 114.7,114.0 130.8,110.6 147.0,109.4 C 163.2,108.2 179.3,111.1 195.5,109.4 C 211.7,107.8 227.8,100.7 244.0,99.5 C 260.2,98.3 276.3,103.8 292.5,102.5 C 308.7,101.2 324.8,93.2 341.0,92.0 C 357.2,90.8 373.3,96.7 389.5,95.6 C 405.7,94.5 421.8,87.2 438.0,85.4 C 454.2,83.6 470.3,86.4 486.5,84.5 C 502.7,82.6 526.9,75.8 535.0,74.0"
-                  fill="none"
-                  stroke="#F97316"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-                <circle cx="50.0" cy="125.0" r="3.5" fill="#F97316" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="98.5" cy="116.6" r="3.5" fill="#F97316" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="147.0" cy="109.4" r="3.5" fill="#F97316" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="195.5" cy="109.4" r="3.5" fill="#F97316" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="244.0" cy="99.5" r="3.5" fill="#F97316" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="292.5" cy="102.5" r="3.5" fill="#F97316" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="341.0" cy="92.0" r="3.5" fill="#F97316" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="389.5" cy="95.6" r="3.5" fill="#F97316" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="438.0" cy="85.4" r="3.5" fill="#F97316" stroke="#FFFFFF" strokeWidth="1.5" />
-                <circle cx="486.5" cy="84.5" r="3.5" fill="#F97316" stroke="#FFFFFF" strokeWidth="1.5" />
-
-                <rect x="520" y="64" width="32" height="18" rx="9" fill="#F97316" />
-                <text x="536" y="77" fill="#FFFFFF" fontSize="9.5" fontWeight="700" textAnchor="middle">
-                  22K
-                </text>
-              </svg>
-            </div>
-          </div>
+  <div className="overview-metric-card">
+    <div className="overview-card-header">
+      <div className="overview-card-icon-wrap icon-teal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" strokeWidth="2.2"
+          strokeLinecap="round" strokeLinejoin="round">
+          <rect x="9" y="3" width="6" height="4.5" rx="1" />
+          <rect x="2" y="16.5" width="5.5" height="4.5" rx="1" />
+          <rect x="9.25" y="16.5" width="5.5" height="4.5" rx="1" />
+          <rect x="16.5" y="16.5" width="5.5" height="4.5" rx="1" />
+          <path d="M12 7.5v4" />
+          <path d="M4.75 11.5h14.5" />
+          <path d="M4.75 11.5v5" />
+          <path d="M12 11.5v5" />
+          <path d="M19.25 11.5v5" />
+        </svg>
+      </div>
+      <button
+        type="button"
+        className="overview-card-view-btn"
+        onClick={() => handleNavClick('Institutes')}
+        aria-label="View all departments"
+      >
+        <span>View All</span>
+        <span className="view-arrow">→</span>
+      </button>
+    </div>
+    <div className="overview-card-content">
+      <span className="overview-card-label">Departments</span>
+      <h3 className="overview-card-value">420</h3>
+      <div className="overview-card-trend">
+        <span className="trend-growth-badge">↑ +15%</span>
+        <span className="trend-subtext">active units</span>
+      </div>
+    </div>
+  </div>
+</div>
 
           <div className="recent-activities-card">
             <div className="card-header-row">
