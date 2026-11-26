@@ -13,6 +13,7 @@ import {
   ChartNoAxesColumnIncreasing,
   Settings,
   ArrowRight,
+  Landmark,
   X
 } from "lucide-react";
 
@@ -21,9 +22,11 @@ import instituteCampus from "../../assets/dashboard/institute-campus.png";
 import aiAssistant from "../../assets/dashboard/ai-assistant.png";
 
 const navigationItems = [
-  { label: "Dashboard", icon: House, active: true },
+  { label: "Dashboard", icon: House },
+  { label: "Institute Details", icon: Landmark },
   { label: "Students", icon: UsersRound },
   { label: "Faculty", icon: ContactRound },
+  { label: "Principals", icon: UsersRound },
   { label: "Courses", icon: ClipboardList },
   { label: "Batches", icon: BriefcaseBusiness },
   { label: "Attendance", icon: CalendarCheck },
@@ -35,7 +38,7 @@ const navigationItems = [
   { label: "Settings", icon: Settings }
 ];
 
-function Sidebar({ isOpen, onClose }) {
+function Sidebar({ isOpen, onClose, activePage = "Dashboard", onNavigate }) {
   return (
     <aside className={`admin-sidebar ${isOpen ? "is-open" : ""}`}>
       <button
@@ -82,9 +85,10 @@ function Sidebar({ isOpen, onClose }) {
             <a
               href="#"
               key={item.label}
-              className={`sidebar-link ${item.active ? "active" : ""}`}
+              className={`sidebar-link ${activePage === item.label ? "active" : ""}`}
               onClick={(event) => {
                 event.preventDefault();
+                onNavigate?.(item.label);
                 onClose();
               }}
             >

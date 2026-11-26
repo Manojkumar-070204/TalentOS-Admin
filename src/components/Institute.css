@@ -1,0 +1,2340 @@
+
+.institute .talent-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f4f6fa;
+    font-family: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1e293b;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.institute .talent-content {
+    padding: 16px 28px 36px;
+    max-width: 1550px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Breadcrumb */
+.institute .breadcrumb-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.institute .breadcrumb-separator {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.institute .breadcrumb-current {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+
+.institute .institute-details-banner {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+}
+
+.institute .banner-bg-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.institute .banner-campus-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right 25%;
+    display: block;
+}
+
+.institute .banner-gradient-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.94) 0%,
+            rgba(255, 255, 255, 0.88) 16%,
+            rgba(255, 255, 255, 0.65) 28%,
+            rgba(255, 255, 255, 0.2) 40%,
+            rgba(255, 255, 255, 0) 52%);
+    pointer-events: none;
+}
+
+.institute .banner-content-layer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 24px;
+}
+
+.institute .banner-temple-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.institute .banner-temple-svg {
+    width: 38px;
+    height: 38px;
+    filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.2));
+}
+
+.institute .banner-title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.institute .banner-heading {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0a1c4b;
+    letter-spacing: -0.3px;
+    margin: 0 0 2px 0;
+}
+
+.institute .banner-subheading {
+    font-size: 13px;
+    color: #475569;
+    font-weight: 500;
+    margin: 0;
+}
+
+.institute .institute-profile-stats-row {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #edf2f7;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.institute .college-profile-identity {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.institute .college-emblem-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.institute .pmc-crest-wrap {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.institute .pmc-crest-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
+}
+
+/* Vertical Separator after Logo */
+.institute .college-logo-divider {
+    width: 1px;
+    height: 96px;
+    background-color: #e2e8f0;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.institute .college-info-col {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: auto;
+    min-width: 200px;
+}
+
+.institute .college-header-title-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.institute .college-name {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0a1c4b;
+    letter-spacing: -0.3px;
+    margin: 0;
+}
+
+.institute .verified-check {
+    display: flex;
+    align-items: center;
+}
+
+.institute .verified-svg {
+    width: 17px;
+    height: 17px;
+}
+
+.institute .college-quote {
+    font-size: 12px;
+    color: #475569;
+    font-weight: 500;
+    margin: 2px 0 8px 0;
+}
+
+.institute .college-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.institute .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11.5px;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.institute .contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563eb;
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+}
+
+.institute .contact-icon svg {
+    width: 13px;
+    height: 13px;
+}
+
+.institute .contact-val {
+    color: #1e293b;
+}
+
+.institute .contact-val-link {
+    color: #1e293b;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.institute .contact-val-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* 3-Column Equal-Sized Metric & Pill Cards Grid */
+.institute .metrics-grid-3x2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "type    students faculty"
+        "accred  courses  batches";
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.institute .card-type { grid-area: type; }
+.institute .card-accred { grid-area: accred; }
+.institute .card-students { grid-area: students; }
+.institute .card-faculty { grid-area: faculty; }
+.institute .card-courses { grid-area: courses; }
+.institute .card-batches { grid-area: batches; }
+
+.institute .metric-card {
+    border-radius: 12px;
+    border: 1px solid #edf2f7;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+}
+
+.institute .metric-card.white-card {
+    background: #ffffff;
+    border: 1px solid #edf2f7;
+}
+
+.institute .metric-card.blue-pill {
+    background-color: #eff6ff;
+    border: 1px solid #dbeafe;
+}
+
+.institute .metric-card.orange-pill {
+    background-color: #fffbeb;
+    border: 1px solid #fef3c7;
+}
+
+.institute .metric-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.institute .metric-icon-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.institute .metric-icon-circle.blue-circle {
+    background-color: #dbeafe;
+    color: #2563eb;
+}
+
+.institute .metric-icon-circle.orange-circle {
+    background-color: #fef3c7;
+    color: #f59e0b;
+}
+
+.institute .metric-icon-circle.light-blue {
+    background-color: #eff6ff;
+}
+
+.institute .metric-icon-circle.light-purple {
+    background-color: #f3e8ff;
+}
+
+.institute .metric-icon-circle.light-orange {
+    background-color: #fef3c7;
+}
+
+.institute .metric-icon-circle.light-green {
+    background-color: #dcfce7;
+}
+
+.institute .stat-circle-svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+.institute .metric-content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    min-width: 0;
+}
+
+.institute .metric-title {
+    font-size: 12px;
+    color: #0f172a;
+    font-weight: 700;
+    letter-spacing: -0.15px;
+    white-space: nowrap;
+}
+
+.institute .metric-number {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0a1c4b;
+    line-height: 1.15;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+}
+
+.institute .metric-number.text-val {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: #0a1c4b;
+}
+
+.institute .metric-trend {
+    font-size: 10.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+
+.institute .green-trend {
+    color: #16a34a;
+}
+
+
+.institute .institute-tabs-bar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 12px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+}
+
+.institute .tab-pill-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    color: #475569;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.institute .tab-pill-btn:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: #1e293b;
+}
+
+.institute .tab-pill-btn.active {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+.institute .tab-icon {
+    display: flex;
+    align-items: center;
+}
+
+.institute .tab-svg {
+    width: 13px;
+    height: 13px;
+}
+
+
+.institute .overview-two-col-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 14px;
+    margin-bottom: 14px;
+    align-items: start;
+    width: 100%;
+    min-width: 0;
+}
+
+.institute .overview-left-col, .institute .overview-right-col {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+.institute .card-top-title {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 10px;
+}
+
+.institute .card-top-title-spread {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.institute .title-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.institute .section-card-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0a1c4b;
+    margin: 0;
+    letter-spacing: -0.2px;
+}
+
+.institute .blue-info-icon, .institute .blue-star-icon, .institute .blue-chart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.institute .blue-info-icon svg, .institute .blue-star-icon svg, .institute .blue-chart-icon svg {
+    width: 15px;
+    height: 15px;
+}
+
+.institute .gold-crown-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #fef3c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.institute .gold-crown-icon svg {
+    width: 12px;
+    height: 12px;
+    fill: #f59e0b;
+}
+
+.institute .gold-zap-icon {
+    display: flex;
+    align-items: center;
+    color: #f59e0b;
+}
+
+.institute .gold-zap-icon svg {
+    width: 15px;
+    height: 15px;
+    fill: #f59e0b;
+}
+
+
+.institute .overview-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #edf2f7;
+    padding: 13px 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.institute .overview-card .card-top-title {
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.institute .overview-content-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 225px;
+    gap: 16px;
+    align-items: center;
+}
+
+.institute .overview-description-text {
+    font-size: 11.5px;
+    line-height: 1.55;
+    color: #334155;
+    font-weight: 500;
+    margin: 0;
+}
+
+.institute .overview-campus-thumb {
+    height: 86px;
+    width: 225px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+}
+
+.institute .thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+.institute .features-achievements-row {
+    display: grid;
+    grid-template-columns: 36.5% 1fr;
+    gap: 12px;
+}
+
+.institute .feature-card, .institute .achievements-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #edf2f7;
+    padding: 13px 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.institute .feature-card .card-top-title, .institute .achievements-card .card-top-title {
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.institute .key-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.institute .feature-list-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.institute .feature-check-icon {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.institute .bullet-check-svg {
+    width: 13.5px;
+    height: 13.5px;
+    display: block;
+    fill: #2563eb;
+    flex-shrink: 0;
+}
+
+.institute .feature-text {
+    font-size: 11.5px;
+    color: #1e293b;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+
+.institute .achievements-metrics-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4px 0;
+}
+
+.institute .achievement-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.institute .achievement-icon-standalone {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.institute .achievement-icon-standalone svg {
+    height: 20px;
+    width: auto;
+    max-width: 28px;
+    display: block;
+}
+
+.institute .trophy-color {
+    color: #f59e0b;
+}
+
+.institute .trophy-color svg {
+    fill: #f59e0b;
+}
+
+.institute .star-color {
+    color: #f59e0b;
+}
+
+.institute .star-color svg {
+    fill: #f59e0b;
+}
+
+.institute .users-color {
+    color: #2563eb;
+}
+
+.institute .users-color svg {
+    fill: #2563eb;
+}
+
+.institute .achievement-val {
+    font-size: 19px;
+    font-weight: 800;
+    color: #0a1c4b;
+    line-height: 1.1;
+}
+
+.institute .achievement-label {
+    font-size: 10.5px;
+    color: #64748b;
+    font-weight: 500;
+    margin-top: 2px;
+    white-space: nowrap;
+}
+
+.institute .achievement-item-divider {
+    width: 1px;
+    height: 46px;
+    background-color: #e2e8f0;
+    flex-shrink: 0;
+}
+
+
+.institute .overview-right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.institute .subscription-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #edf2f7;
+    padding: 13px 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.institute .subscription-card .card-top-title-spread {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    margin-bottom: 2px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.institute .status-badge-active {
+    background-color: #dcfce7;
+    color: #16a34a;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 9999px;
+}
+
+.institute .subscription-details-table {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px 0;
+    gap: 0;
+}
+
+.institute .sub-detail-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11.5px;
+    padding: 6.5px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.institute .sub-detail-row:last-child {
+    border-bottom: none;
+    padding-bottom: 9px;
+}
+
+.institute .sub-row-label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.institute .sub-row-value {
+    color: #0a1c4b;
+    font-weight: 700;
+}
+
+.institute .plan-val {
+    font-size: 11.5px;
+    font-weight: 700;
+}
+
+.institute .amount-val {
+    font-size: 12px;
+    font-weight: 800;
+    color: #0a1c4b;
+}
+
+.institute .view-billing-btn {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+}
+
+.institute .view-billing-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.institute .btn-icon svg {
+    width: 13px;
+    height: 13px;
+}
+
+/* Quick Actions Card */
+.institute .quick-actions-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #edf2f7;
+    padding: 13px 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.institute .quick-actions-card .card-top-title {
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.institute .quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.institute .action-tile-btn {
+    background: #f8fafd;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    padding: 12px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.institute .action-tile-btn:hover {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+}
+
+.institute .action-tile-direct-icon {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+.institute .action-svg-icon {
+    width: 26px;
+    height: 26px;
+    display: block;
+    color: #2563eb;
+    fill: #2563eb;
+    filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.25));
+    transition: transform 0.2s ease;
+}
+
+.institute .action-tile-btn:hover .action-svg-icon {
+    transform: scale(1.08);
+}
+
+.institute .action-tile-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0a1c4b;
+    line-height: 1.25;
+    text-align: center;
+    white-space: normal;
+    display: block;
+    max-width: 76px;
+}
+
+.institute .action-tile-sub {
+    font-size: 8.5px;
+    color: #64748b;
+    font-weight: 500;
+    margin-top: 2px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: normal;
+    display: block;
+    max-width: 76px;
+}
+
+
+.institute .tab-pane-content {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.institute .tab-pane-desc {
+    font-size: 13.5px;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.institute .departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.institute .dept-card {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: #f8fafc;
+}
+
+.institute .dept-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.institute .dept-card p {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.institute .dept-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.institute .contact-dir-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.institute .dir-item {
+    padding: 14px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.institute .dir-item strong {
+    display: block;
+    font-size: 13px;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.institute .dir-item p {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.institute .facilities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.institute .facility-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.institute .facility-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #2563eb;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.institute .facility-item strong {
+    font-size: 13px;
+    color: #0f172a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.institute .facility-item p {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.institute .about-text {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.institute .vision-mission-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.institute .vm-box {
+    padding: 16px;
+    background: #eff6ff;
+    border-radius: 12px;
+    border: 1px solid #dbeafe;
+}
+
+.institute .vm-box h4 {
+    color: #1e40af;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.institute .vm-box p {
+    font-size: 12.5px;
+    color: #334155;
+    line-height: 1.5;
+}
+
+
+.institute .bottom-notice-banner {
+    background: #d7e1fd;
+    border: 1px solid #c5d5fb;
+    border-radius: 14px;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(37, 99, 235, 0.05);
+    margin-top: 14px;
+}
+
+.institute .notice-left-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.institute .megaphone-icon-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #cad9fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.institute .megaphone-icon-circle svg {
+    width: 19px;
+    height: 19px;
+    display: block;
+}
+
+.institute .notice-text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.institute .notice-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f2a78;
+    margin: 0;
+    line-height: 1.25;
+}
+
+.institute .notice-message {
+    font-size: 11px;
+    font-weight: 500;
+    color: #3352cc;
+    margin: 2px 0 0 0;
+    line-height: 1.35;
+}
+
+.institute .view-news-outline-btn {
+    padding: 6px 14px;
+    background: #eef4ff;
+    border: 1px solid #2563eb;
+    border-radius: 9999px;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.institute .view-news-outline-btn:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+    transform: translateY(-1px);
+}
+
+
+.institute .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.institute .modal-dialog-box {
+    background: #ffffff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    animation: modalScaleUp 0.2s ease-out;
+}
+
+@keyframes  modalScaleUp  {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.institute .modal-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.institute .modal-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.institute .modal-close-btn {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.institute .modal-body {
+    padding: 20px;
+}
+
+.institute .modal-desc {
+    font-size: 13.5px;
+    color: #475569;
+    margin-bottom: 16px;
+}
+
+.institute .modal-sample-data {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.institute .sample-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12.5px;
+}
+
+.institute .sample-row span {
+    color: #64748b;
+}
+
+.institute .badge-green {
+    background-color: #dcfce7;
+    color: #15803d;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.institute .modal-footer {
+    padding: 14px 20px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.institute .modal-action-btn {
+    padding: 8px 18px;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+@media  (min-width: 1800px)  {
+    .institute .talent-content {
+        max-width: 2200px;
+        padding: 24px 40px 48px;
+    }
+
+    .institute .institute-details-banner {
+        height: 130px;
+        margin-bottom: 20px;
+    }
+
+    .institute .banner-heading {
+        font-size: 26px;
+    }
+
+    .institute .banner-subheading {
+        font-size: 14.5px;
+    }
+
+    .institute .banner-temple-svg {
+        width: 44px;
+        height: 44px;
+    }
+
+    .institute .institute-profile-stats-row {
+        padding: 18px 26px;
+        gap: 28px;
+    }
+
+    .institute .pmc-crest-wrap {
+        width: 120px;
+        height: 120px;
+    }
+
+    .institute .college-name {
+        font-size: 23px;
+    }
+
+    .institute .metrics-grid-3x2 {
+        gap: 14px;
+    }
+
+    .institute .metric-card {
+        padding: 12px 18px;
+    }
+
+    .institute .metric-number {
+        font-size: 19px;
+    }
+
+    .institute .overview-two-col-layout {
+        grid-template-columns: minmax(0, 1fr) 340px;
+        gap: 20px;
+    }
+
+    .institute .overview-campus-thumb {
+        width: 250px;
+        height: 95px;
+    }
+
+    .institute .features-achievements-row {
+        gap: 16px;
+    }
+}
+
+/* 2. Small Laptops & Medium Desktops (1025px – 1280px) */
+@media  (max-width: 1280px)  {
+    .institute .talent-content {
+        padding: 16px 20px 32px;
+    }
+
+    .institute .institute-profile-stats-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 18px;
+    }
+
+    .institute .college-profile-identity {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-shrink: 0;
+    }
+
+    .institute .pmc-crest-wrap {
+        width: 95px;
+        height: 95px;
+    }
+
+    .institute .college-name {
+        font-size: 20px;
+    }
+
+    .institute .college-info-col {
+        min-width: 170px;
+    }
+
+    .institute .metrics-grid-3x2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "type    students faculty"
+            "accred  courses  batches";
+        gap: 8px;
+        flex: 1;
+        min-width: 0;
+        max-width: 580px;
+    }
+
+    .institute .metric-card {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+    .institute .metric-number {
+        font-size: 15px;
+    }
+
+    .institute .overview-two-col-layout {
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 14px;
+    }
+
+    .institute .features-achievements-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+
+@media  (max-width: 1024px)  {
+    .institute .institute-details-banner {
+        height: 110px;
+    }
+
+
+    .institute .institute-profile-stats-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 14px 16px;
+    }
+
+    .institute .college-profile-identity {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+        flex-shrink: 0;
+    }
+
+    .institute .pmc-crest-wrap {
+        width: 90px;
+        height: 90px;
+    }
+
+    .institute .college-logo-divider {
+        display: block;
+        height: 85px;
+    }
+
+    .institute .college-name {
+        font-size: 19px;
+    }
+
+    .institute .college-info-col {
+        min-width: 160px;
+    }
+
+    .institute .metrics-grid-3x2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "type    students faculty"
+            "accred  courses  batches";
+        gap: 8px;
+        flex: 1;
+        min-width: 0;
+        max-width: 560px;
+    }
+
+    .institute .metric-card {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+    .institute .metric-icon-circle {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+    }
+
+    .institute .metric-number {
+        font-size: 14.5px;
+    }
+
+    .institute .metric-title {
+        font-size: 11.5px;
+        color: #0f172a;
+        font-weight: 700;
+    }
+
+    .institute .overview-two-col-layout {
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 14px;
+    }
+
+    .institute .features-achievements-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .institute .quick-actions-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media  (max-width: 880px) and (min-width: 681px)  {
+    .institute .institute-profile-stats-row {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 12px !important;
+        padding: 12px 14px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .institute .college-profile-identity {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex-shrink: 0 !important;
+        width: auto !important;
+        max-width: 295px !important;
+    }
+
+    .institute .pmc-crest-wrap {
+        width: 72px !important;
+        height: 72px !important;
+        min-width: 72px !important;
+    }
+
+    .institute .college-logo-divider {
+        display: block !important;
+        height: 80px !important;
+    }
+
+    .institute .college-name {
+        font-size: 16.5px !important;
+        letter-spacing: -0.2px !important;
+    }
+
+    .institute .college-quote {
+        font-size: 10.5px !important;
+        margin: 1px 0 6px 0 !important;
+    }
+
+    .institute .college-contact-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3px !important;
+    }
+
+    .institute .contact-item {
+        font-size: 10px !important;
+        gap: 5px !important;
+    }
+
+    .institute .contact-icon svg {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    .institute .metrics-grid-3x2 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        grid-template-areas:
+            "type     accred"
+            "students faculty"
+            "courses  batches" !important;
+        gap: 6px !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+        max-width: 440px !important;
+    }
+
+    .institute .metric-card {
+        padding: 6px 8px !important;
+        gap: 6px !important;
+        border-radius: 10px !important;
+    }
+
+    .institute .metric-icon-circle {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+    }
+
+    .institute .metric-icon-circle svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    .institute .metric-number {
+        font-size: 13.5px !important;
+    }
+
+    .institute .metric-title {
+        font-size: 11px !important;
+        color: #0f172a !important;
+        font-weight: 700 !important;
+    }
+
+    .institute .metric-trend {
+        font-size: 8.5px !important;
+    }
+
+    .institute .overview-two-col-layout {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .institute .overview-content-row {
+        grid-template-columns: minmax(0, 1fr) 200px !important;
+        gap: 12px !important;
+        align-items: center !important;
+    }
+
+    .institute .overview-campus-thumb {
+        width: 200px !important;
+        height: 80px !important;
+    }
+
+    .institute .features-achievements-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .institute .quick-actions-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+    }
+}
+
+
+@media  (max-width: 768px)  {
+    .institute .talent-layout, .institute .talent-content {
+        width: 100% !important;
+        max-width: 100vw !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+
+    .institute .talent-content {
+        padding: 14px 12px 28px;
+    }
+
+    .institute .institute-details-banner {
+        height: auto;
+        min-height: 96px;
+        padding: 12px 0;
+        margin-bottom: 12px;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .institute .banner-content-layer {
+        padding: 0 14px;
+        gap: 10px;
+    }
+
+    .institute .banner-heading {
+        font-size: 18px;
+    }
+
+    .institute .banner-subheading {
+        font-size: 11.5px;
+    }
+
+    .institute .banner-temple-svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .institute .banner-gradient-fade {
+        background: linear-gradient(90deg,
+                rgba(255, 255, 255, 0.96) 0%,
+                rgba(255, 255, 255, 0.90) 35%,
+                rgba(255, 255, 255, 0.65) 60%,
+                rgba(255, 255, 255, 0.2) 85%,
+                rgba(255, 255, 255, 0) 100%);
+        pointer-events: none;
+    }
+
+    .institute .overview-two-col-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        gap: 14px !important;
+    }
+
+    .institute .overview-left-col, .institute .overview-right-col {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .institute .institute-tabs-bar {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        width: 100%;
+        max-width: 100%;
+        gap: 6px;
+        padding-bottom: 4px;
+        box-sizing: border-box;
+    }
+
+    .institute .institute-tabs-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .institute .tab-pill-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .institute .overview-card, .institute .feature-card, .institute .achievements-card, .institute .subscription-card, .institute .quick-actions-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .institute .overview-description-text {
+        width: 100% !important;
+        max-width: 100% !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        font-size: 12px !important;
+        line-height: 1.55 !important;
+        color: #334155 !important;
+    }
+
+    .institute .achievements-metrics-wrap {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-around !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 8px 4px !important;
+        gap: 4px !important;
+    }
+
+    .institute .achievement-item {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        min-width: 0 !important;
+        padding: 0 4px !important;
+    }
+
+    .institute .achievement-icon-standalone {
+        height: 22px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-bottom: 2px !important;
+    }
+
+    .institute .achievement-icon-standalone svg {
+        height: 18px !important;
+        width: auto !important;
+    }
+
+    .institute .achievement-val {
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        color: #0a1c4b !important;
+        line-height: 1.1 !important;
+    }
+
+    .institute .achievement-label {
+        font-size: 9.5px !important;
+        color: #64748b !important;
+        font-weight: 500 !important;
+        margin-top: 2px !important;
+        white-space: normal !important;
+        text-align: center !important;
+        line-height: 1.2 !important;
+        word-break: break-word !important;
+    }
+
+    .institute .achievement-item-divider {
+        display: block !important;
+        width: 1px !important;
+        height: 34px !important;
+        background-color: #e2e8f0 !important;
+        flex-shrink: 0 !important;
+        margin: 0 2px !important;
+    }
+
+    .institute .subscription-details-table {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 0 10px 0 !important;
+    }
+
+    .institute .sub-detail-row {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        gap: 8px !important;
+        font-size: 11.5px !important;
+        padding: 6.5px 0 !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+    }
+
+    .institute .sub-row-label {
+        flex-shrink: 0 !important;
+        color: #64748b !important;
+        font-weight: 500 !important;
+        font-size: 11.5px !important;
+    }
+
+    .institute .sub-row-value {
+        text-align: right !important;
+        word-break: break-word !important;
+        font-weight: 700 !important;
+        font-size: 11.5px !important;
+        color: #0a1c4b !important;
+        min-width: 0 !important;
+    }
+
+    .institute .plan-val {
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        line-height: 1.25 !important;
+    }
+
+    .institute .view-billing-btn {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        font-size: 11.5px !important;
+        padding: 9px 12px !important;
+    }
+
+    .institute .quick-actions-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 6px;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .institute .departments-grid, .institute .contact-dir-grid, .institute .facilities-grid, .institute .vision-mission-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .institute .dir-item p {
+        word-break: break-word;
+    }
+
+}
+
+/* 4b. Mobile Phablets & Phones (<= 680px) */
+@media  (max-width: 680px)  {
+    .institute .institute-profile-stats-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 12px 10px !important;
+        gap: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .institute .college-profile-identity {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    .institute .college-emblem-col {
+        justify-content: flex-start !important;
+        margin-bottom: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    .institute .pmc-crest-wrap {
+        width: 66px !important;
+        height: 66px !important;
+        min-width: 66px !important;
+    }
+
+    /* Never show vertical divider on mobile screens */
+    .institute .college-logo-divider {
+        display: none !important;
+    }
+
+    .institute .college-info-col {
+        align-items: flex-start !important;
+        text-align: left !important;
+        min-width: 0 !important;
+        flex: 1 !important;
+    }
+
+    .institute .college-header-title-row {
+        justify-content: flex-start !important;
+        flex-wrap: wrap !important;
+        gap: 5px !important;
+    }
+
+    .institute .college-name {
+        font-size: 16px !important;
+        line-height: 1.2 !important;
+    }
+
+    .institute .verified-svg {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    .institute .college-quote {
+        font-size: 10px !important;
+        margin: 1px 0 5px 0 !important;
+    }
+
+    .institute .college-contact-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3px !important;
+        width: 100% !important;
+        align-items: flex-start !important;
+    }
+
+    .institute .contact-item {
+        font-size: 10px !important;
+        gap: 5px !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+
+    .institute .contact-icon svg {
+        width: 11px !important;
+        height: 11px !important;
+    }
+
+    .institute .contact-val-link {
+        word-break: break-all !important;
+    }
+
+   
+    .institute .metrics-grid-3x2 {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .institute .metric-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 9px 12px !important;
+        border-radius: 12px !important;
+        gap: 12px !important;
+        min-width: 0 !important;
+    }
+
+    .institute .metric-icon-circle {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+    }
+
+    .institute .metric-icon-circle svg {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    .institute .metric-content-col {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+
+    .institute .metric-title {
+        font-size: 12px !important;
+        color: #0f172a !important;
+        font-weight: 700 !important;
+        margin-bottom: 2px !important;
+    }
+
+    .institute .metric-number {
+        font-size: 15.5px !important;
+        font-weight: 800 !important;
+        line-height: 1.15 !important;
+    }
+
+    .institute .metric-number.text-val {
+        font-size: 14.5px !important;
+        font-weight: 800 !important;
+    }
+
+    .institute .metric-trend {
+        font-size: 10px !important;
+        font-weight: 600 !important;
+        margin-top: 1px !important;
+    }
+
+    .institute .overview-content-row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .institute .overview-campus-thumb {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 135px !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+    }
+
+    .institute .overview-campus-thumb img, .institute .overview-campus-thumb .thumb-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    .institute .features-achievements-row {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 12px !important;
+    }
+
+    .institute .bottom-notice-banner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .institute .view-news-outline-btn {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+}
+
+
+@media  (max-width: 480px)  {
+    .institute .talent-content {
+        padding: 10px 8px 24px !important;
+    }
+
+    .institute .institute-details-banner {
+        min-height: 85px;
+        padding: 10px 0;
+        border-radius: 12px;
+    }
+
+    .institute .banner-content-layer {
+        padding: 0 10px;
+        gap: 8px;
+    }
+
+    .institute .banner-heading {
+        font-size: 15px;
+    }
+
+    .institute .banner-subheading {
+        font-size: 10px;
+    }
+
+    .institute .banner-temple-svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .institute .institute-profile-stats-row {
+        padding: 12px 10px !important;
+        border-radius: 12px !important;
+        gap: 10px !important;
+    }
+
+    .institute .college-profile-identity {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    .institute .pmc-crest-wrap {
+        width: 62px !important;
+        height: 62px !important;
+        min-width: 62px !important;
+    }
+
+    .institute .college-logo-divider {
+        display: none !important;
+    }
+
+    .institute .college-name {
+        font-size: 15px !important;
+    }
+
+    .institute .college-quote {
+        font-size: 9.5px !important;
+    }
+
+    .institute .contact-item {
+        font-size: 9.5px !important;
+    }
+
+    .institute .metrics-grid-3x2 {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .institute .metric-card {
+        padding: 8px 10px !important;
+        border-radius: 10px !important;
+    }
+
+    .institute .metric-icon-circle {
+        width: 34px !important;
+        height: 34px !important;
+        min-width: 34px !important;
+    }
+
+    .institute .metric-number {
+        font-size: 15px !important;
+    }
+
+    .institute .metric-title, .institute .metric-label {
+        font-size: 11.5px !important;
+        color: #0f172a !important;
+        font-weight: 700 !important;
+    }
+
+    .institute .metric-growth-badge {
+        font-size: 9px !important;
+    }
+
+    .institute .tab-pill-btn {
+        padding: 5px 9px !important;
+        font-size: 10.5px !important;
+    }
+
+    .institute .overview-card, .institute .feature-card, .institute .achievements-card, .institute .subscription-card, .institute .quick-actions-card {
+        padding: 12px 10px !important;
+        border-radius: 12px !important;
+    }
+
+    .institute .overview-description-text {
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+    }
+
+    .institute .overview-campus-thumb {
+        height: 125px !important;
+        border-radius: 8px !important;
+    }
+
+    .institute .achievements-metrics-wrap {
+        padding: 6px 2px !important;
+        gap: 2px !important;
+    }
+
+    .institute .achievement-icon-standalone {
+        height: 20px !important;
+    }
+
+    .institute .achievement-icon-standalone svg {
+        height: 16px !important;
+    }
+
+    .institute .achievement-val {
+        font-size: 14px !important;
+    }
+
+    .institute .achievement-label {
+        font-size: 8.5px !important;
+        line-height: 1.15 !important;
+    }
+
+    .institute .achievement-item-divider {
+        height: 28px !important;
+    }
+
+    .institute .quick-actions-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 6px !important;
+    }
+
+    .institute .action-tile-btn {
+        padding: 10px 4px !important;
+        border-radius: 10px !important;
+    }
+
+    .institute .action-tile-direct-icon {
+        height: 28px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .institute .action-svg-icon {
+        width: 23px !important;
+        height: 23px !important;
+        fill: #2563eb !important;
+        color: #2563eb !important;
+        filter: drop-shadow(0 1px 2px rgba(37, 99, 235, 0.22)) !important;
+    }
+
+    .institute .action-tile-label {
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        max-width: 68px !important;
+    }
+
+    .institute .action-tile-sub {
+        font-size: 8px !important;
+        max-width: 68px !important;
+    }
+
+    .institute .bottom-notice-banner {
+        padding: 12px 12px;
+        border-radius: 12px;
+        background: #d7e1fd !important;
+        border: 1px solid #c5d5fb !important;
+    }
+
+    .institute .notice-title {
+        font-size: 12.5px !important;
+        color: #0f2a78 !important;
+    }
+
+    .institute .notice-message {
+        font-size: 11px !important;
+        color: #3352cc !important;
+    }
+
+    .institute .modal-dialog-box {
+        width: calc(100vw - 16px);
+        margin: 8px auto;
+        border-radius: 14px;
+    }
+
+    .institute .modal-header, .institute .modal-body, .institute .modal-footer {
+        padding: 12px 14px;
+    }
+}
+
+/* 7. Extra Small Mobile Phones (<= 360px, including 347px) */
+@media  (max-width: 360px)  {
+    .institute .pmc-crest-wrap {
+        width: 56px !important;
+        height: 56px !important;
+        min-width: 56px !important;
+    }
+
+    .institute .college-name {
+        font-size: 14px !important;
+    }
+
+    .institute .college-quote {
+        font-size: 9px !important;
+    }
+
+    .institute .contact-item {
+        font-size: 9px !important;
+    }
+
+    .institute .metric-card {
+        padding: 7px 9px !important;
+    }
+
+    .institute .metric-icon-circle {
+        width: 30px !important;
+        height: 30px !important;
+        min-width: 30px !important;
+    }
+
+    .institute .metric-number {
+        font-size: 14px !important;
+    }
+
+    .institute .quick-actions-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 4px !important;
+    }
+
+    .institute .action-tile-btn {
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding: 8px 2px !important;
+        gap: 0 !important;
+        border-radius: 9px !important;
+    }
+
+    .institute .action-tile-direct-icon {
+        height: 24px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .institute .action-svg-icon {
+        width: 21px !important;
+        height: 21px !important;
+        fill: #2563eb !important;
+        color: #2563eb !important;
+    }
+
+    .institute .action-tile-label {
+        font-size: 9.5px !important;
+        max-width: 62px !important;
+    }
+
+    .institute .action-tile-sub {
+        font-size: 7.5px !important;
+        max-width: 62px !important;
+    }
+
+    .institute .achievement-val {
+        font-size: 13px !important;
+    }
+
+    .institute .achievement-label {
+        font-size: 8px !important;
+    }
+
+    .institute .metric-title, .institute .metric-label {
+        font-size: 11px !important;
+        color: #0f172a !important;
+        font-weight: 700 !important;
+    }
+}

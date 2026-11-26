@@ -4243,3 +4243,75 @@ button {
     height: 75px !important;
   }
 }
+
+
+
+.dashboard-topbar::after {
+  position: absolute !important;
+  top: 0 !important;
+  right: 235px !important;
+  width: 300px !important;
+  height: 80px !important;
+  content: "" !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  z-index: 1 !important;
+  background: linear-gradient(
+    130deg,
+    transparent 0%,
+    transparent 8%,
+    #edf2ff 8%,
+    #edf2ff 23%,
+    #bfd2ff 23%,
+    #bfd2ff 40%,
+    #5b87f7 40%,
+    #5b87f7 61%,
+    #ffc15a 61%,
+    #ffc15a 77%,
+    transparent 77%
+  ) !important;
+  clip-path: polygon(
+    18% 0,
+    100% 0,
+    76% 100%,
+    0 100%
+  ) !important;
+}
+
+
+
+
+.auth-card:not(.register-mode) .auth-form-panel {
+  overflow: hidden !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.auth-card:not(.register-mode) .auth-content {
+  width: 100% !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.auth-card:not(.register-mode) .input-group {
+  overflow: hidden !important;
+  min-width: 0 !important;
+}
+
+.auth-card:not(.register-mode) .input-group input {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-align: left !important;
+  direction: ltr !important;
+  user-select: text !important;
+}
+
+.auth-card:not(.register-mode) .input-group input:-webkit-autofill,
+.auth-card:not(.register-mode) .input-group input:-webkit-autofill:hover,
+.auth-card:not(.register-mode) .input-group input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #102e70 !important;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  box-shadow: 0 0 0 1000px #ffffff inset !important;
+}

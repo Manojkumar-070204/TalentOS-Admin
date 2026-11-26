@@ -38,6 +38,13 @@ import {
   ComposedChart
 } from "recharts";
 import Sidebar from "../components/admin/Sidebar";
+import Studentlist from "../components/admin/Studentlist";
+import Principleins from "../components/admin/Principleins";
+import Faculty from "../components/admin/Faculty";
+import Institute from "../components/Institute";
+import Course from "../components/Course";
+import Attendance from "../components/attendance";
+import AcademicBatchesPage from "../components/admin/Batches";
 import campusBanner from "../assets/dashboard/campus-banner.png";
 import instituteCampus from "../assets/dashboard/institute-campus.png";
 
@@ -379,6 +386,7 @@ function FilledDashboardIcon({ name, size = 28 }) {
 
 function AdminDashboard({ onLogout }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [activePage, setActivePage] = useState("Dashboard");
   const [activePeriod, setActivePeriod] = useState("month");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
@@ -386,7 +394,6 @@ function AdminDashboard({ onLogout }) {
   const [profileOpen, setProfileOpen] = useState(false);
   const [activitiesOpen, setActivitiesOpen] = useState(false);
   const [calendarOpen, setCalendarOpen] = useState(false);
-  const [instituteOpen, setInstituteOpen] = useState(false);
   const [activeModal, setActiveModal] = useState(null);
   const [toast, setToast] = useState("");
   const [readNotifications, setReadNotifications] = useState(false);
@@ -474,6 +481,11 @@ function AdminDashboard({ onLogout }) {
     setProfileOpen(false);
   };
 
+  const handleNavigation = (page) => {
+    setActivePage(page);
+    closeAllPopups();
+  };
+
   const handleSearchFocus = () => {
     setSearchOpen(true);
     setNotificationsOpen(false);
@@ -508,7 +520,12 @@ function AdminDashboard({ onLogout }) {
         onClick={closeSidebar}
       />
 
-      <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
+      <Sidebar
+        isOpen={sidebarOpen}
+        onClose={closeSidebar}
+        activePage={activePage}
+        onNavigate={handleNavigation}
+      />
 
       <main className="admin-main-content">
         <header
@@ -703,6 +720,22 @@ function AdminDashboard({ onLogout }) {
           </div>
         </header>
 
+        {activePage === "Students" ? (
+          <Studentlist />
+        ) : activePage === "Principals" ? (
+          <Principleins />
+        ) : activePage === "Faculty" ? (
+          <Faculty />
+        ) : activePage === "Institute Details" ? (
+          <Institute />
+        ) : activePage === "Courses" ? (
+          <Course />
+        ) : activePage === "Batches" ? (
+          <AcademicBatchesPage />
+        ) : activePage === "Attendance" ? (
+          <Attendance />
+        ) : (
+          <>
         <section className="welcome-banner">
           <img
             src={campusBanner}
@@ -1048,7 +1081,7 @@ function AdminDashboard({ onLogout }) {
 
               <button
                 type="button"
-                onClick={() => setInstituteOpen(true)}
+                onClick={() => handleNavigation("Institute Details")}
               >
                 View Profile <ArrowRight size={17} />
               </button>
@@ -1182,6 +1215,8 @@ function AdminDashboard({ onLogout }) {
             </div>
           </article>
         </section>
+          </>
+        )}
       </main>
 
       {activitiesOpen && (
@@ -1273,64 +1308,6 @@ function AdminDashboard({ onLogout }) {
                   <span>{event.time}</span>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {instituteOpen && (
-        <div className="dashboard-modal-overlay">
-          <div className="dashboard-modal institute-modal">
-            <div className="modal-header">
-              <div>
-                <h2>PMC College</h2>
-                <p>Institute profile details</p>
-              </div>
-
-              <button
-                type="button"
-                onClick={() => setInstituteOpen(false)}
-                aria-label="Close institute profile"
-              >
-                <X size={20} />
-              </button>
-            </div>
-
-            <div className="institute-profile-modal-content">
-              <img src={instituteCampus} alt="PMC College campus" />
-
-              <div>
-                <h3>PMC College</h3>
-                <p>
-                  <MapPin size={17} />
-                  Hosur, Tamil Nadu
-                </p>
-                <p>
-                  <Mail size={17} />
-                  pmc@college.ac.in
-                </p>
-                <p>
-                  <Phone size={17} />
-                  +91 98765 43210
-                </p>
-              </div>
-            </div>
-
-            <div className="modal-institute-stats">
-              <div>
-                <span>Students</span>
-                <strong>1,250</strong>
-              </div>
-
-              <div>
-                <span>Faculty</span>
-                <strong>120</strong>
-              </div>
-
-              <div>
-                <span>Courses</span>
-                <strong>48</strong>
-              </div>
             </div>
           </div>
         </div>
@@ -1441,3 +1418,4 @@ function AdminDashboard({ onLogout }) {
 }
 
 export default AdminDashboard;
+
