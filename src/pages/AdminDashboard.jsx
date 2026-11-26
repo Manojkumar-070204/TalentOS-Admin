@@ -42,6 +42,7 @@ import Studentlist from "../components/admin/Studentlist";
 import Principleins from "../components/admin/Principleins";
 import Faculty from "../components/admin/Faculty";
 import Institute from "../components/Institute";
+import Instituteprofile from "../components/admin/Instituteprofile";
 import Course from "../components/Course";
 import Attendance from "../components/attendance";
 import AcademicBatchesPage from "../components/admin/Batches";
@@ -482,7 +483,7 @@ function AdminDashboard({ onLogout }) {
   };
 
   const handleNavigation = (page) => {
-    setActivePage(page);
+    setActivePage(page === "Institute Details" ? "Instituteprofile" : page);
     closeAllPopups();
   };
 
@@ -726,7 +727,9 @@ function AdminDashboard({ onLogout }) {
           <Principleins />
         ) : activePage === "Faculty" ? (
           <Faculty />
-        ) : activePage === "Institute Details" ? (
+        ) : activePage === "Instituteprofile" ? (
+          <Instituteprofile onSaveSuccess={() => setActivePage("Institute Details Saved")} />
+        ) : activePage === "Institute Details Saved" ? (
           <Institute />
         ) : activePage === "Courses" ? (
           <Course />

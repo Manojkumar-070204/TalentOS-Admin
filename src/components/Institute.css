@@ -2338,3 +2338,129 @@
         font-weight: 700 !important;
     }
 }
+
+
+
+@media (min-width: 681px) and (max-width: 1024px) {
+    .institute .institute-profile-stats-row {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) !important;
+        align-items: center !important;
+        gap: 14px !important;
+    }
+
+    .institute .college-profile-identity {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .institute .college-info-col {
+        min-width: 0 !important;
+        flex: 1 !important;
+    }
+
+    .institute .metrics-grid-3x2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .institute .metric-card {
+        min-width: 0 !important;
+    }
+
+    .institute .metric-content-col {
+        min-width: 0 !important;
+    }
+
+    .institute .metric-title {
+        white-space: normal !important;
+    }
+}
+
+@media (min-width: 881px) and (max-width: 1024px) {
+    .institute .institute-profile-stats-row {
+        grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr) !important;
+        gap: 12px !important;
+        padding: 12px 14px !important;
+    }
+
+    .institute .college-profile-identity {
+        gap: 10px !important;
+    }
+
+    .institute .pmc-crest-wrap {
+        width: 72px !important;
+        height: 72px !important;
+        min-width: 72px !important;
+    }
+
+    .institute .college-name {
+        font-size: 17px !important;
+        line-height: 1.2 !important;
+    }
+
+    .institute .college-info-col {
+        min-width: 0 !important;
+    }
+
+    .institute .metrics-grid-3x2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-rows: repeat(3, auto) !important;
+        grid-template-areas:
+            "type students"
+            "faculty accred"
+            "courses batches" !important;
+        gap: 8px !important;
+    }
+
+    .institute .metric-card {
+        padding: 8px !important;
+        gap: 6px !important;
+    }
+
+    .institute .metric-title {
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+    }
+
+    .institute .metric-number {
+        font-size: 13.5px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .institute .contact-dir-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .institute .dir-item {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .institute .dir-item p {
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+    }
+
+    .institute .tab-pane-content {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .institute .contact-info-section {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+}
